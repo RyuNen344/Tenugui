@@ -30,10 +30,12 @@ jobs:
       - uses: ./.github/actions/gradle
       - uses: reviewdog/action-setup@v1
       - name: run android lint
+        if: ${{ !cancelled() }}
         shell: bash
         run: |
           ./gradlew lintDebug
       - name: run detekt
+        if: ${{ !cancelled() }}
         shell: bash
         run: |
           ./gradlew detekt
