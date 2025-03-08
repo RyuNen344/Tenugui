@@ -63,6 +63,7 @@ runs:
       with:
         api-level: ${{ inputs.api-level }}
         arch: x86_64
+        profile: pixel_7
         force-avd-creation: false
         emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
         disable-animations: false
@@ -80,6 +81,7 @@ runs:
       with:
         api-level: ${{ inputs.api-level }}
         arch: x86_64
+        profile: pixel_7
         force-avd-creation: false
         emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
         disable-animations: true
