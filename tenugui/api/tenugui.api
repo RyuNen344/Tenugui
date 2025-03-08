@@ -1,0 +1,255 @@
+public final class io/github/ryunen344/tenugui/BottomSheetBehaviorProperties : android/os/Parcelable {
+	public static final field $stable I
+	public static final field CREATOR Landroid/os/Parcelable$Creator;
+	public static final field Companion Lio/github/ryunen344/tenugui/BottomSheetBehaviorProperties$Companion;
+	public static final field DEFAULT_SIGNIFICANT_VEL_THRESHOLD I
+	public static final field HIDE_FRICTION F
+	public static final field NO_MAX_SIZE I
+	public fun <init> ()V
+	public fun <init> (ZIIIFIZZZIIF)V
+	public synthetic fun <init> (ZIIIFIZZZIIFILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Z
+	public final fun component10 ()I
+	public final fun component11 ()I
+	public final fun component12 ()F
+	public final fun component2 ()I
+	public final fun component3 ()I
+	public final fun component4 ()I
+	public final fun component5 ()F
+	public final fun component6 ()I
+	public final fun component7 ()Z
+	public final fun component8 ()Z
+	public final fun component9 ()Z
+	public final fun copy (ZIIIFIZZZIIF)Lio/github/ryunen344/tenugui/BottomSheetBehaviorProperties;
+	public static synthetic fun copy$default (Lio/github/ryunen344/tenugui/BottomSheetBehaviorProperties;ZIIIFIZZZIIFILjava/lang/Object;)Lio/github/ryunen344/tenugui/BottomSheetBehaviorProperties;
+	public final fun describeContents ()I
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getDraggable ()Z
+	public final fun getExpandedOffset ()I
+	public final fun getFitToContents ()Z
+	public final fun getHalfExpandedRatio ()F
+	public final fun getHideFriction ()F
+	public final fun getHideable ()Z
+	public final fun getMaxHeight ()I
+	public final fun getMaxWidth ()I
+	public final fun getPeekHeight ()I
+	public final fun getSaveFlags ()I
+	public final fun getSignificantVelocityThreshold ()I
+	public final fun getSkipCollapsed ()Z
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+	public final fun writeToParcel (Landroid/os/Parcel;I)V
+}
+
+public final class io/github/ryunen344/tenugui/BottomSheetBehaviorProperties$Companion {
+}
+
+public final class io/github/ryunen344/tenugui/BottomSheetBehaviorProperties$Creator : android/os/Parcelable$Creator {
+	public fun <init> ()V
+	public final fun createFromParcel (Landroid/os/Parcel;)Lio/github/ryunen344/tenugui/BottomSheetBehaviorProperties;
+	public synthetic fun createFromParcel (Landroid/os/Parcel;)Ljava/lang/Object;
+	public final fun newArray (I)[Lio/github/ryunen344/tenugui/BottomSheetBehaviorProperties;
+	public synthetic fun newArray (I)[Ljava/lang/Object;
+}
+
+public final class io/github/ryunen344/tenugui/BottomSheetBehaviorPropertiesKt {
+	public static final fun rememberBottomSheetBehaviorProperties (Ljava/lang/String;ZIIIFIZZZIIFLandroidx/compose/runtime/Composer;III)Lio/github/ryunen344/tenugui/BottomSheetBehaviorProperties;
+}
+
+public final class io/github/ryunen344/tenugui/BottomSheetBehaviorState {
+	public static final field $stable I
+	public fun <init> (Lio/github/ryunen344/tenugui/BottomSheetBehaviorProperties;Lkotlin/jvm/functions/Function0;)V
+	public final fun getDraggable ()Landroidx/compose/runtime/State;
+	public final fun getExpandedOffset ()Landroidx/compose/runtime/IntState;
+	public final fun getFitToContents ()Landroidx/compose/runtime/State;
+	public final fun getHalfExpandedRatio ()Landroidx/compose/runtime/FloatState;
+	public final fun getHideFriction ()Landroidx/compose/runtime/FloatState;
+	public final fun getHideable ()Landroidx/compose/runtime/State;
+	public final fun getMaxHeight ()Landroidx/compose/runtime/IntState;
+	public final fun getMaxWidth ()Landroidx/compose/runtime/IntState;
+	public final fun getPeekHeight ()Landroidx/compose/runtime/IntState;
+	public final fun getSaveFlags ()Landroidx/compose/runtime/IntState;
+	public final fun getSignificantVelocityThreshold ()Landroidx/compose/runtime/IntState;
+	public final fun getSkipCollapsed ()Landroidx/compose/runtime/State;
+	public final fun getSlideOffset ()Landroidx/compose/runtime/FloatState;
+	public final fun getState ()Landroidx/compose/runtime/IntState;
+	public final fun setDraggable (ZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun setExpandedOffset (ILkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun setFitToContents (ZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun setHalfExpandedRatio (FLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun setHideFriction (FLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun setHideable (ZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun setPeekHeight (ILkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun setSaveFlags (ILkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun setSignificantVelocityThreshold (ILkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun setSkipCollapsed (ZLkotlin/coroutines/Continuation;)Ljava/lang/Object;
+	public final fun setState (ILkotlin/coroutines/Continuation;)Ljava/lang/Object;
+}
+
+public final class io/github/ryunen344/tenugui/BottomSheetDialogKt {
+	public static final fun BottomSheetDialog (Lkotlin/jvm/functions/Function0;Ljava/lang/String;Lio/github/ryunen344/tenugui/BottomSheetDialogState;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
+}
+
+public final class io/github/ryunen344/tenugui/BottomSheetDialogProperties : android/os/Parcelable {
+	public static final field $stable I
+	public static final field CREATOR Landroid/os/Parcelable$Creator;
+	public synthetic fun <init> (ZZZZLandroidx/compose/ui/window/SecureFlagPolicy;ZFILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public synthetic fun <init> (ZZZZLandroidx/compose/ui/window/SecureFlagPolicy;ZFLkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun component1 ()Z
+	public final fun component2 ()Z
+	public final fun component3 ()Z
+	public final fun component4 ()Z
+	public final fun component5 ()Landroidx/compose/ui/window/SecureFlagPolicy;
+	public final fun component6 ()Z
+	public final fun component7-D9Ej5fM ()F
+	public final fun copy-6ZxE2Lo (ZZZZLandroidx/compose/ui/window/SecureFlagPolicy;ZF)Lio/github/ryunen344/tenugui/BottomSheetDialogProperties;
+	public static synthetic fun copy-6ZxE2Lo$default (Lio/github/ryunen344/tenugui/BottomSheetDialogProperties;ZZZZLandroidx/compose/ui/window/SecureFlagPolicy;ZFILjava/lang/Object;)Lio/github/ryunen344/tenugui/BottomSheetDialogProperties;
+	public final fun describeContents ()I
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getCancelable ()Z
+	public final fun getCanceledOnTouchOutside ()Z
+	public final fun getDecorFitsSystemWindows ()Z
+	public final fun getDismissOnBackPress ()Z
+	public final fun getDismissWithAnimation ()Z
+	public final fun getElevation-D9Ej5fM ()F
+	public final fun getSecurePolicy ()Landroidx/compose/ui/window/SecureFlagPolicy;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+	public final fun writeToParcel (Landroid/os/Parcel;I)V
+}
+
+public final class io/github/ryunen344/tenugui/BottomSheetDialogProperties$Creator : android/os/Parcelable$Creator {
+	public fun <init> ()V
+	public final fun createFromParcel (Landroid/os/Parcel;)Lio/github/ryunen344/tenugui/BottomSheetDialogProperties;
+	public synthetic fun createFromParcel (Landroid/os/Parcel;)Ljava/lang/Object;
+	public final fun newArray (I)[Lio/github/ryunen344/tenugui/BottomSheetDialogProperties;
+	public synthetic fun newArray (I)[Ljava/lang/Object;
+}
+
+public final class io/github/ryunen344/tenugui/BottomSheetDialogPropertiesKt {
+	public static final fun rememberBottomSheetDialogProperties-egy_3UM (Ljava/lang/String;ZZZZLandroidx/compose/ui/window/SecureFlagPolicy;ZFLandroidx/compose/runtime/Composer;II)Lio/github/ryunen344/tenugui/BottomSheetDialogProperties;
+}
+
+public final class io/github/ryunen344/tenugui/BottomSheetDialogState {
+	public static final field $stable I
+	public fun <init> ()V
+	public fun <init> (Lio/github/ryunen344/tenugui/BottomSheetDialogState$SavedState;Lio/github/ryunen344/tenugui/BottomSheetDialogProperties;Lio/github/ryunen344/tenugui/BottomSheetBehaviorProperties;)V
+	public synthetic fun <init> (Lio/github/ryunen344/tenugui/BottomSheetDialogState$SavedState;Lio/github/ryunen344/tenugui/BottomSheetDialogProperties;Lio/github/ryunen344/tenugui/BottomSheetBehaviorProperties;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun dispose ()V
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBehavior ()Lio/github/ryunen344/tenugui/BottomSheetBehaviorState;
+	public final fun getBehaviorProperties ()Lio/github/ryunen344/tenugui/BottomSheetBehaviorProperties;
+	public final fun getDialogProperties ()Lio/github/ryunen344/tenugui/BottomSheetDialogProperties;
+	public fun hashCode ()I
+	public final fun onRestoreInstanceState (Lio/github/ryunen344/tenugui/BottomSheetDialogWrapper;)V
+	public final fun onSaveInstanceState (Lio/github/ryunen344/tenugui/BottomSheetDialogWrapper;)V
+	public final fun setProperties (Lcom/google/android/material/bottomsheet/BottomSheetBehavior;)V
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class io/github/ryunen344/tenugui/BottomSheetDialogState$SavedState : android/os/Parcelable {
+	public static final field $stable I
+	public static final field CREATOR Landroid/os/Parcelable$Creator;
+	public fun <init> ()V
+	public fun <init> (Landroid/os/Bundle;Landroid/os/Parcelable;)V
+	public synthetic fun <init> (Landroid/os/Bundle;Landroid/os/Parcelable;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public final fun describeContents ()I
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getBehaviorState ()Landroid/os/Parcelable;
+	public final fun getDialogState ()Landroid/os/Bundle;
+	public fun hashCode ()I
+	public final fun setBehaviorState (Landroid/os/Parcelable;)V
+	public final fun setDialogState (Landroid/os/Bundle;)V
+	public final fun writeToParcel (Landroid/os/Parcel;I)V
+}
+
+public final class io/github/ryunen344/tenugui/BottomSheetDialogState$SavedState$Creator : android/os/Parcelable$Creator {
+	public fun <init> ()V
+	public final fun createFromParcel (Landroid/os/Parcel;)Lio/github/ryunen344/tenugui/BottomSheetDialogState$SavedState;
+	public synthetic fun createFromParcel (Landroid/os/Parcel;)Ljava/lang/Object;
+	public final fun newArray (I)[Lio/github/ryunen344/tenugui/BottomSheetDialogState$SavedState;
+	public synthetic fun newArray (I)[Ljava/lang/Object;
+}
+
+public final class io/github/ryunen344/tenugui/BottomSheetDialogStateKt {
+	public static final fun rememberBottomSheetDialogState (Ljava/lang/String;Landroid/os/Bundle;Landroid/os/Parcelable;Lio/github/ryunen344/tenugui/BottomSheetDialogProperties;Lio/github/ryunen344/tenugui/BottomSheetBehaviorProperties;Landroidx/compose/runtime/Composer;II)Lio/github/ryunen344/tenugui/BottomSheetDialogState;
+	public static final fun rememberBottomSheetDialogState-MV32uAI (Ljava/lang/String;Landroid/os/Bundle;Landroid/os/Parcelable;ZZZZLandroidx/compose/ui/window/SecureFlagPolicy;ZFZIIIFIZZZIIFLandroidx/compose/runtime/Composer;IIII)Lio/github/ryunen344/tenugui/BottomSheetDialogState;
+}
+
+public final class io/github/ryunen344/tenugui/BottomSheetDialogWrapper : com/google/android/material/bottomsheet/BottomSheetDialog, androidx/compose/ui/platform/ViewRootForInspector {
+	public static final field $stable I
+	public fun <init> (Lkotlin/jvm/functions/Function0;Lio/github/ryunen344/tenugui/BottomSheetDialogProperties;Landroid/view/View;Landroidx/compose/ui/unit/LayoutDirection;Landroidx/compose/ui/unit/Density;Ljava/lang/String;)V
+	public fun cancel ()V
+	public final fun disposeComposition ()V
+	public final fun getBottomSheet ()Landroid/widget/FrameLayout;
+	public final fun getContainer ()Landroid/widget/FrameLayout;
+	public final fun getCoordinator ()Landroidx/coordinatorlayout/widget/CoordinatorLayout;
+	public fun getSubCompositionView ()Landroidx/compose/ui/platform/AbstractComposeView;
+	public fun getViewRoot ()Landroid/view/View;
+	public final fun setContent (Landroidx/compose/runtime/CompositionContext;Lkotlin/jvm/functions/Function2;)V
+	public fun setContentView (I)V
+	public fun setContentView (Landroid/view/View;)V
+	public fun setContentView (Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+	public final fun updateParameters (Lkotlin/jvm/functions/Function0;Lio/github/ryunen344/tenugui/BottomSheetDialogProperties;Landroidx/compose/ui/unit/LayoutDirection;)V
+}
+
+public final class io/github/ryunen344/tenugui/ComposableSingletons$BottomSheetDialogLayoutKt {
+	public static final field INSTANCE Lio/github/ryunen344/tenugui/ComposableSingletons$BottomSheetDialogLayoutKt;
+	public static field lambda-1 Lkotlin/jvm/functions/Function2;
+	public fun <init> ()V
+	public final fun getLambda-1$tenugui_release ()Lkotlin/jvm/functions/Function2;
+}
+
+public final class io/github/ryunen344/tenugui/ListenableBottomSheetBehavior : com/google/android/material/bottomsheet/BottomSheetBehavior {
+	public static final field $stable I
+	public fun <init> (Landroid/content/Context;)V
+	public fun <init> (Landroid/content/Context;Landroid/util/AttributeSet;)V
+	public synthetic fun <init> (Landroid/content/Context;Landroid/util/AttributeSet;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
+	public fun getExpandedOffset ()I
+	public fun getHalfExpandedRatio ()F
+	public fun getHideFriction ()F
+	public fun getMaxHeight ()I
+	public fun getMaxWidth ()I
+	public fun getPeekHeight ()I
+	public fun getSaveFlags ()I
+	public fun getSignificantVelocityThreshold ()I
+	public fun getSkipCollapsed ()Z
+	public final fun getSnapshotDraggable ()Landroidx/compose/runtime/State;
+	public final fun getSnapshotExpandedOffset ()Landroidx/compose/runtime/IntState;
+	public final fun getSnapshotFitToContents ()Landroidx/compose/runtime/State;
+	public final fun getSnapshotGestureInsetBottomIgnored ()Landroidx/compose/runtime/State;
+	public final fun getSnapshotHalfExpandedRatio ()Landroidx/compose/runtime/FloatState;
+	public final fun getSnapshotHideFriction ()Landroidx/compose/runtime/FloatState;
+	public final fun getSnapshotHideable ()Landroidx/compose/runtime/State;
+	public final fun getSnapshotMaxHeight ()Landroidx/compose/runtime/IntState;
+	public final fun getSnapshotMaxWidth ()Landroidx/compose/runtime/IntState;
+	public final fun getSnapshotPeekHeight ()Landroidx/compose/runtime/IntState;
+	public final fun getSnapshotSaveFlags ()Landroidx/compose/runtime/IntState;
+	public final fun getSnapshotShouldRemoveExpandedCorners ()Landroidx/compose/runtime/State;
+	public final fun getSnapshotSignificantVelocityThreshold ()Landroidx/compose/runtime/IntState;
+	public final fun getSnapshotSkipCollapsed ()Landroidx/compose/runtime/State;
+	public final fun getSnapshotSlideOffset ()Landroidx/compose/runtime/FloatState;
+	public final fun getSnapshotState ()Landroidx/compose/runtime/IntState;
+	public fun getState ()I
+	public fun isDraggable ()Z
+	public fun isFitToContents ()Z
+	public fun isGestureInsetBottomIgnored ()Z
+	public fun isHideable ()Z
+	public fun isShouldRemoveExpandedCorners ()Z
+	public fun setDraggable (Z)V
+	public fun setExpandedOffset (I)V
+	public fun setFitToContents (Z)V
+	public fun setGestureInsetBottomIgnored (Z)V
+	public fun setHalfExpandedRatio (F)V
+	public fun setHideFriction (F)V
+	public fun setHideable (Z)V
+	public fun setMaxHeight (I)V
+	public fun setMaxWidth (I)V
+	public fun setPeekHeight (I)V
+	public fun setSaveFlags (I)V
+	public fun setShouldRemoveExpandedCorners (Z)V
+	public fun setSignificantVelocityThreshold (I)V
+	public fun setSkipCollapsed (Z)V
+	public fun setState (I)V
+}
+
