@@ -62,6 +62,7 @@ runs:
       uses: reactivecircus/android-emulator-runner@v2
       with:
         api-level: ${{ inputs.api-level }}
+        target: google_apis_playstore
         arch: x86_64
         profile: pixel_7
         force-avd-creation: false
@@ -79,6 +80,7 @@ runs:
       uses: reactivecircus/android-emulator-runner@v2
       with:
         api-level: ${{ inputs.api-level }}
+        target: google_apis_playstore
         arch: x86_64
         profile: pixel_7
         force-avd-creation: false
