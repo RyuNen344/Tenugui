@@ -27,8 +27,6 @@ runs:
       id: cache-key
       shell: bash
       run: |
-        avdmanager list device;
-        
         urlencode() {
           local length="${#1}"
           for (( i = 0; i < length; i++ )); do
@@ -65,7 +63,6 @@ runs:
       with:
         api-level: ${{ inputs.api-level }}
         arch: x86_64
-        profile: pixel_8
         force-avd-creation: false
         emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
         disable-animations: false
@@ -75,6 +72,7 @@ runs:
       shell: bash
       if: ${{ inputs.prepare-script != '' }}
       run: |
+        avdmanager list device
         ${{ inputs.prepare-script }}
 
     - name: run script
