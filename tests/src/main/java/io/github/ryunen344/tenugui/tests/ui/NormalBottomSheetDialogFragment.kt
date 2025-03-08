@@ -137,7 +137,7 @@ class NormalBottomSheetDialogFragment : BottomSheetDialogFragment() {
     }
 
     companion object {
-        const val TAG = "NormalBottomSheetDialogFragment"
+        const val TAG = "NBSDialogFragment"
 
         fun AppCompatActivity.findFragment(): NormalBottomSheetDialogFragment {
             return (supportFragmentManager.findFragmentByTag(this::class.java.simpleName) as? NormalBottomSheetDialogFragment)
