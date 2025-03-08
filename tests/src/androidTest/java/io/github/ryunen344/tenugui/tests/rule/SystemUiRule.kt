@@ -48,6 +48,7 @@ class SystemUiRule : TestRule {
                         try {
                             val instrumentation = InstrumentationRegistry.getInstrumentation()
                             instrumentation.uiAutomation.executeShellCommand("cmd overlay enable com.android.internal.emulation.pixel_8")
+                            instrumentation.uiAutomation.executeShellCommand("cmd overlay enable com.android.internal.systemui.navbar.gestural")
                             context.demoMode(true)
                             UiDevice.getInstance(instrumentation).waitForIdle()
                             context.sendOrderedBroadcast(
