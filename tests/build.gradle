@@ -1,0 +1,25 @@
+plugins {
+    alias libs.plugins.android.application
+    alias libs.plugins.jetbrains.kotlin.android
+    alias libs.plugins.jetbrains.compose
+    alias libs.plugins.dropshots
+}
+
+apply from: rootProject.layout.projectDirectory.file("gradle/android.gradle")
+apply from: rootProject.layout.projectDirectory.file("gradle/compose.gradle")
+apply from: rootProject.layout.projectDirectory.file("gradle/test.gradle")
+apply from: rootProject.layout.projectDirectory.file("gradle/test-compose.gradle")
+
+android.namespace = "io.github.ryunen344.tenugui.tests"
+
+dependencies {
+    implementation project(":tenugui")
+    implementation libs.androidx.appcompat
+    implementation libs.androidx.activity.compose
+    implementation libs.androidx.compose.ui
+    implementation libs.androidx.compose.material
+    implementation libs.androidx.compose.material3
+    implementation libs.material
+    implementation libs.androidx.compose.ui.tooling
+    implementation libs.androidx.compose.ui.tooling.preview
+}
