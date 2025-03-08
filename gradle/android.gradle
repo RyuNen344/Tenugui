@@ -22,7 +22,6 @@ android {
     lint {
         checkReleaseBuilds = false
         sarifReport = true
-        abortOnError = System.getenv("CI") == null
         baseline = rootProject.layout.projectDirectory.file(".lint/android-baseline.xml")
     }
 }

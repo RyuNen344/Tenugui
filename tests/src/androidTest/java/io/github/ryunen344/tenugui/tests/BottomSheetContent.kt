@@ -222,8 +222,7 @@ internal val SpreadFocusedTextFieldBottomSheetContent: @Composable () -> Unit = 
             .statusBarsPadding()
             .navigationBarsPadding()
             .imePadding(),
-
-        ) {
+    ) {
         TextField(
             modifier = Modifier
                 .focusRequester(focusRequester)

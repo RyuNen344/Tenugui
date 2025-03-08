@@ -80,7 +80,10 @@ class SystemUiRule : TestRule {
                         countDownLatch.countDown()
                     }
                 },
-                null, 0, null, null,
+                null,
+                0,
+                null,
+                null,
             )
         }
         countDownLatch.await(10, TimeUnit.SECONDS)

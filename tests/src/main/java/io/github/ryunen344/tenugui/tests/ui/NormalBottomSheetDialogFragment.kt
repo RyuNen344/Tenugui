@@ -91,8 +91,6 @@ class NormalBottomSheetDialogFragment : BottomSheetDialogFragment() {
 
             ViewCompat.setOnApplyWindowInsetsListener(requireNotNull(window?.decorView)) { view, insets ->
                 val metrics = resources.displayMetrics
-
-
                 val displayCutout = insets.getInsets(WindowInsetsCompat.Type.displayCutout())
                 val insetsWidth = (displayCutout.right + displayCutout.left) / metrics.density
                 val insetsHeight = (displayCutout.top + displayCutout.bottom) / metrics.density
@@ -140,7 +138,6 @@ class NormalBottomSheetDialogFragment : BottomSheetDialogFragment() {
 
     companion object {
         const val TAG = "NormalBottomSheetDialogFragment"
-
 
         fun AppCompatActivity.findFragment(): NormalBottomSheetDialogFragment {
             return (supportFragmentManager.findFragmentByTag(this::class.java.simpleName) as? NormalBottomSheetDialogFragment)

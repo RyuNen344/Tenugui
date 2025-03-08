@@ -38,5 +38,3 @@ class EdgeToEdgeActivity : AppCompatActivity() {
         }
     }
 }
-
-
