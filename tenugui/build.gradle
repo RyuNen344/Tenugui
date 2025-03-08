@@ -1,0 +1,23 @@
+plugins {
+    alias libs.plugins.android.library
+    alias libs.plugins.jetbrains.kotlin.android
+    alias libs.plugins.jetbrains.kotlin.plugin.parcelize
+    alias libs.plugins.jetbrains.kotlinx.compatibility
+    alias libs.plugins.jetbrains.compose
+}
+
+apply from: rootProject.layout.projectDirectory.file("gradle/android.gradle")
+apply from: rootProject.layout.projectDirectory.file("gradle/compose.gradle")
+apply from: rootProject.layout.projectDirectory.file("gradle/publish.gradle")
+
+android.namespace = "io.github.ryunen344.tenugui"
+
+kotlin {
+    explicitApi()
+}
+
+dependencies {
+    implementation libs.androidx.compose.ui
+    implementation libs.androidx.compose.foundation
+    implementation libs.material
+}
