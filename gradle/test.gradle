@@ -23,6 +23,9 @@ android {
                     }
                 }
             }
+            emulatorControl {
+                enable = true
+            }
             packagingOptions {
                 jniLibs.pickFirsts.add("lib/*/*.so")
             }

@@ -73,7 +73,6 @@ runs:
       shell: bash
       if: ${{ inputs.prepare-script != '' }}
       run: |
-        avdmanager list device
         ${{ inputs.prepare-script }}
 
     - name: run script

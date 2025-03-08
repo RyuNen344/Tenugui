@@ -47,8 +47,9 @@ class SystemUiRule : TestRule {
                         val context = ApplicationProvider.getApplicationContext<Context>()
                         try {
                             val instrumentation = InstrumentationRegistry.getInstrumentation()
-                            UiDevice.getInstance(instrumentation).waitForIdle()
+                            instrumentation.uiAutomation.executeShellCommand("cmd overlay enable-exclusive com.android.internal.systemui.navbar.gestural")
                             context.demoMode(true)
+                            UiDevice.getInstance(instrumentation).waitForIdle()
                             context.sendOrderedBroadcast(
                                 listOf(
                                     Intent(ACTION_SYSTEM_UI_DEMO_MODE).apply { putExtras(COMMAND_ENTER) },
