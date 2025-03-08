@@ -27,6 +27,8 @@ runs:
       id: cache-key
       shell: bash
       run: |
+        avdmanager list device;
+        
         urlencode() {
           local length="${#1}"
           for (( i = 0; i < length; i++ )); do
