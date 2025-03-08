@@ -1,0 +1,69 @@
+pluginManager.apply("maven-publish")
+pluginManager.apply("signing")
+
+def localProperty = new Properties()
+def localPropertyFile = new File(rootDir, "local.properties")
+if (localPropertyFile.exists()) {
+    localProperty.load(localPropertyFile.newDataInputStream())
+}
+
+group = "io.github.ryunen344.tenugui"
+version = providers.fileContents(rootProject.layout.projectDirectory.file("version.txt")).asText.orNull?.trim() ?: "snapshot"
+
+android.publishing {
+    singleVariant("release") {
+        withSourcesJar()
+        withJavadocJar()
+    }
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                pom {
+                    name.set(project.findProperty("POM_NAME"))
+                    description.set(project.findProperty("POM_DESCRIPTION"))
+                    url.set("https://github.com/RyuNen344/Tenugui")
+                    licenses {
+                        license {
+                            name.set("Apache License 2.0")
+                            url.set("https://github.com/RyuNen344/Tenugui/blob/main/LICENSE")
+                            distribution.set("repo")
+                        }
+                    }
+                    developers {
+                        developer {
+                            id.set("RyuNen344")
+                            name.set("RyuNen344")
+                            email.set("s1100633@outlook.com")
+                        }
+                    }
+                    scm {
+                        connection.set("scm:git://github.com/RyuNen344/Tenugui.git")
+                        developerConnection.set("scm:git:ssh://github.com/RyuNen344/Tenugui.git")
+                        url.set("https://github.com/RyuNen344/Tenugui")
+                    }
+                }
+                from components.release
+            }
+        }
+        repositories {
+            maven {
+                name = "Local"
+                setUrl(rootProject.layout.projectDirectory.dir("releases/maven"))
+            }
+        }
+    }
+}
+
+signing {
+    def enabled = localProperty.getProperty("signing.enabled")?.toBoolean() ?: System.getenv("SIGNING_ENABLED")?.toBoolean() ?: false
+    if (enabled) {
+        def keyId = localProperty.getProperty("pgp.key_id") ?: System.getenv("PGP_KEY_ID")
+        def secretKey = localProperty.getProperty("pgp.signing_key") ?: System.getenv("PGP_SIGNING_KEY")
+        def password = localProperty.getProperty("pgp.signing_password") ?: System.getenv("PGP_SIGNING_PASSWORD")
+        useInMemoryPgpKeys(keyId, secretKey, password)
+        sign(publishing.publications)
+    }
+}

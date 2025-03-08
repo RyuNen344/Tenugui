@@ -1,0 +1,35 @@
+plugins {
+    alias libs.plugins.android.application apply false
+    alias libs.plugins.android.library apply false
+    alias libs.plugins.jetbrains.kotlin.android apply false
+    alias libs.plugins.jetbrains.compose apply false
+    alias libs.plugins.roborazzi apply false
+    alias libs.plugins.nexus.publish
+}
+
+tasks.register('clean', Delete) {
+    group = "clean"
+    delete(rootProject.layout.buildDirectory.get())
+}
+
+tasks.register('cleanPublish', Delete) {
+    group = "clean"
+    delete(rootProject.layout.projectDirectory.dir("releases"))
+}
+
+def localProperty = new Properties()
+def localPropertyFile = new File(rootDir, "local.properties")
+if (localPropertyFile.exists()) {
+    localProperty.load(localPropertyFile.newDataInputStream())
+}
+
+nexusPublishing {
+    repositories {
+        sonatype {
+            nexusUrl.set(uri("https://s01.oss.sonatype.org/service/local/"))
+            snapshotRepositoryUrl.set(uri("https://s01.oss.sonatype.org/content/repositories/snapshots/"))
+            username.set(localProperty.getProperty("sonatype.username") ?: System.getenv("SONATYPE_USERNAME"))
+            password.set(localProperty.getProperty("sonatype.password") ?: System.getenv("SONATYPE_PASSWORD"))
+        }
+    }
+}

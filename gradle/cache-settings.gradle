@@ -1,0 +1,9 @@
+// https://docs.gradle.org/current/userguide/directory_layout.html#dir:gradle_user_home:configure_cache_cleanup
+beforeSettings { settings ->
+    settings.caches {
+        releasedWrappers.removeUnusedEntriesAfterDays = 1
+        snapshotWrappers.removeUnusedEntriesAfterDays = 1
+        downloadedResources.removeUnusedEntriesAfterDays = 1
+        createdResources.removeUnusedEntriesAfterDays = 1
+    }
+}

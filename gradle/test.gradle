@@ -1,0 +1,90 @@
+pluginManager.apply("jacoco")
+
+kotlin {
+    compilerOptions {
+        freeCompilerArgs.add("-opt-in=kotlinx.coroutines.ExperimentalCoroutinesApi")
+    }
+}
+
+android {
+    defaultConfig {
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        testOptions {
+            unitTests {
+                includeAndroidResources = true
+                all {
+                    systemProperty("robolectric.logging.enabled", "true")
+                    systemProperty("robolectric.logging", "stdout")
+                    systemProperty("robolectric.pixelCopyRenderMode", "hardware")
+
+                    jacoco {
+                        includeNoLocationClasses = true
+                        excludes = ['jdk.internal.*']
+                    }
+                }
+            }
+            packagingOptions {
+                jniLibs.pickFirsts.add("lib/*/*.so")
+            }
+        }
+    }
+    buildTypes {
+        debug {
+            enableUnitTestCoverage true
+            testCoverageEnabled true
+        }
+    }
+}
+
+androidComponents {
+    beforeVariants(selector().withName("debug")) { variantBuilder ->
+        variantBuilder.enableAndroidTest = true
+        variantBuilder.enableUnitTest = true
+        variantBuilder.enableTestFixtures = false
+    }
+}
+
+jacoco.toolVersion = libs.versions.jacoco.get()
+
+tasks.register("jacoco", JacocoReport) {
+    group = "verification"
+    reports {
+        xml.required = true
+    }
+    sourceDirectories.from.addAll(
+        layout.projectDirectory.dir("src/main/java"),
+    )
+    classDirectories.from.addAll(
+        layout.buildDirectory.dir("tmp/kotlin-classes/debug"),
+        layout.buildDirectory.dir("intermediates/javac/debug"),
+    )
+    executionData.from.addAll(
+        layout.buildDirectory.asFileTree.matching {
+            include("**/*.ec", "**/*.exec")
+        }
+    )
+}
+
+dependencies {
+    testImplementation libs.androidx.test.core
+    testImplementation libs.androidx.test.rules
+    testImplementation libs.androidx.test.runner
+    testImplementation libs.androidx.test.ext.junit
+    testImplementation libs.androidx.test.ext.truth
+    testImplementation libs.com.google.truth.truth
+    testImplementation libs.com.google.truth.extensions.truth.java8
+    testImplementation libs.junit
+    testImplementation libs.app.cash.turbine
+    testImplementation libs.kotlin.test
+    testImplementation libs.org.robolectric.robolectric
+    androidTestImplementation libs.androidx.test.core
+    androidTestImplementation libs.androidx.test.rules
+    androidTestImplementation libs.androidx.test.runner
+    androidTestImplementation libs.androidx.test.ext.junit
+    androidTestImplementation libs.androidx.test.ext.truth
+    androidTestImplementation libs.com.google.truth.truth
+    androidTestImplementation libs.com.google.truth.extensions.truth.java8
+    androidTestImplementation libs.junit
+    androidTestImplementation libs.app.cash.turbine
+    androidTestImplementation libs.kotlin.test
+}
