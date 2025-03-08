@@ -2,21 +2,6 @@ kotlin {
     compilerOptions {
         freeCompilerArgs.add("-opt-in=androidx.compose.ui.test.ExperimentalTestApi")
         freeCompilerArgs.add("-opt-in=androidx.compose.ui.test.InternalTestApi")
-        freeCompilerArgs.add("-opt-in=com.github.takahirom.roborazzi.ExperimentalRoborazziApi")
-        freeCompilerArgs.add("-opt-in=com.github.takahirom.roborazzi.InternalRoborazziApi")
-    }
-}
-
-android {
-    defaultConfig {
-        testOptions {
-            unitTests {
-                all {
-                    maxHeapSize = "8g"
-                    systemProperty("roborazzi.test.record", "false")
-                }
-            }
-        }
     }
 }
 
@@ -25,9 +10,6 @@ dependencies {
     testImplementation libs.androidx.compose.ui.test.manifest
     testImplementation libs.androidx.test.espresso.core
     testImplementation libs.androidx.test.uiautomator
-    testImplementation libs.io.github.takahirom.roborazzi
-    testImplementation libs.io.github.takahirom.roborazzi.compose
-    testImplementation libs.io.github.takahirom.roborazzi.junit
     androidTestImplementation libs.androidx.compose.ui.test.junit4
     androidTestImplementation libs.androidx.compose.ui.test.manifest
     androidTestImplementation libs.androidx.test.espresso.core
