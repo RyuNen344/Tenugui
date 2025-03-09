@@ -24,7 +24,7 @@ import org.junit.rules.TestRule
 import org.junit.runner.Description
 import org.junit.runners.model.Statement
 
-@Retention(AnnotationRetention.BINARY)
+@Retention(AnnotationRetention.RUNTIME)
 @Target(AnnotationTarget.FUNCTION, AnnotationTarget.CLASS)
 annotation class Retry(val times: Int = 3, val timeout: Long = 300)
 
@@ -33,7 +33,7 @@ class RetryException(val errors: List<Throwable>) : RuntimeException(
         appendLine("Invoked test still failed after ${errors.size} retries.")
         errors.forEachIndexed { index, t ->
             appendLine("Attempt #$index threw exception")
-            appendLine(t.stackTraceToString())
+            append(t.stackTraceToString())
         }
     },
 )
