@@ -20,7 +20,7 @@
 
 package io.github.ryunen344.tenugui.tests
 
-import android.view.WindowInsets.Type.ime
+import android.view.WindowInsets
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.test.runAndroidComposeUiTest
@@ -119,8 +119,9 @@ class CollapsedTest {
             }
         }
         waitForIdle()
-        activity?.window?.decorView?.getWindowInsetsController()?.show(ime())
+        activity?.window?.decorView?.getWindowInsetsController()?.show(WindowInsets.Type.ime())
         screenShotRule.device.waitForIdle()
+        waitUntil { activity?.window?.decorView?.rootWindowInsets?.isVisible(WindowInsets.Type.ime()) == true }
         screenShotRule.takeScreenshot()
     }
 
@@ -194,8 +195,9 @@ class CollapsedTest {
             }
         }
         waitForIdle()
-        activity?.window?.decorView?.getWindowInsetsController()?.show(ime())
+        activity?.window?.decorView?.getWindowInsetsController()?.show(WindowInsets.Type.ime())
         screenShotRule.device.waitForIdle()
+        waitUntil { activity?.window?.decorView?.rootWindowInsets?.isVisible(WindowInsets.Type.ime()) == true }
         screenShotRule.takeScreenshot()
     }
 
@@ -278,8 +280,9 @@ class CollapsedTest {
             }
         }
         waitForIdle()
-        activity?.window?.decorView?.getWindowInsetsController()?.show(ime())
+        activity?.window?.decorView?.getWindowInsetsController()?.show(WindowInsets.Type.ime())
         screenShotRule.device.waitForIdle()
+        waitUntil { activity?.window?.decorView?.rootWindowInsets?.isVisible(WindowInsets.Type.ime()) == true }
         screenShotRule.takeScreenshot()
     }
 
@@ -362,8 +365,9 @@ class CollapsedTest {
             }
         }
         waitForIdle()
-        activity?.window?.decorView?.getWindowInsetsController()?.show(ime())
+        activity?.window?.decorView?.getWindowInsetsController()?.show(WindowInsets.Type.ime())
         screenShotRule.device.waitForIdle()
+        waitUntil { activity?.window?.decorView?.rootWindowInsets?.isVisible(WindowInsets.Type.ime()) == true }
         screenShotRule.takeScreenshot()
     }
 }
