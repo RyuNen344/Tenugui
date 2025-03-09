@@ -12,7 +12,7 @@ on:
       - reopened
 
 concurrency:
-  group: dependency-report-${{ github.workflow }}-${{ github.head_ref || github.ref }}
+  group: check-${{ github.workflow }}-${{ github.head_ref || github.ref }}
   cancel-in-progress: true
 
 permissions:
