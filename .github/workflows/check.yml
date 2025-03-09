@@ -12,8 +12,8 @@ on:
       - reopened
 
 concurrency:
-  group: check-${{ github.workflow }}-${{ github.head_ref || github.ref }}
-  cancel-in-progress: ${{ !contains(github.ref, 'main')}}
+  group: dependency-report-${{ github.workflow }}-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: read
