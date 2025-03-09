@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2017 The Android Open Source Project
- * Copyright (C) 2025-2025 RyuNen344
+ * Copyright (C) 2025 RyuNen344
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -123,7 +123,8 @@ public class BottomSheetDialogState(
     }
 
     override fun toString(): String {
-        return "BottomSheetDialogState(savedState = $savedState, dialogProperties = $dialogProperties, behaviorProperties = $behaviorProperties, snapshotBehavior = $snapshotBehavior, behavior = $behavior)"
+        return "BottomSheetDialogState(savedState = $savedState, dialogProperties = $dialogProperties, behaviorProperties = $behaviorProperties, " +
+            "snapshotBehavior = $snapshotBehavior, behavior = $behavior)"
     }
 
     @Parcelize

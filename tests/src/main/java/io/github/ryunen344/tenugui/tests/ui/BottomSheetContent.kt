@@ -52,8 +52,6 @@ import io.github.ryunen344.tenugui.rememberBottomSheetDialogState
 import kotlinx.coroutines.delay
 import java.util.UUID
 
-private const val TAG = "BottomSheetContent"
-
 @Composable
 fun BottomSheetContent(decorFitsSystemWindows: Boolean) {
     var visible by rememberSaveable { mutableStateOf(false) }
@@ -89,7 +87,6 @@ fun BottomSheetContent(decorFitsSystemWindows: Boolean) {
 
             Spacer(modifier = Modifier.weight(1f))
 
-
             Text(
                 modifier = Modifier
                     .background(Color.Magenta)
@@ -116,6 +113,7 @@ fun BottomSheetContent(decorFitsSystemWindows: Boolean) {
         }
 
         LaunchedEffect(key1 = bottomSheetDialogState) {
+            @Suppress("MagicNumber")
             delay(3000)
             bottomSheetDialogState.behavior.setState(BottomSheetBehavior.STATE_HALF_EXPANDED)
         }
@@ -161,6 +159,7 @@ fun BottomSheetContent(decorFitsSystemWindows: Boolean) {
                     },
                 )
 
+                @Suppress("MagicNumber")
                 repeat(33) {
                     Text(
                         modifier = Modifier.padding(16.dp),

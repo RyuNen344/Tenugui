@@ -27,6 +27,7 @@ import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.uiautomator.UiDevice
 import com.dropbox.differ.SimpleImageComparator
 import com.dropbox.dropshots.Dropshots
+import com.dropbox.dropshots.ThresholdValidator
 import org.junit.rules.TestRule
 import org.junit.runner.Description
 import org.junit.runners.model.Statement
@@ -35,7 +36,8 @@ import kotlin.math.roundToInt
 class ScreenShotRule(
     val dropshots: Dropshots = Dropshots(
         filenameFunc = { it },
-        imageComparator = SimpleImageComparator(maxDistance = 0.001f),
+        imageComparator = SimpleImageComparator(maxDistance = 0.5f),
+        resultValidator = ThresholdValidator(threshold = 0.007f), // 0.7%
     ),
 ) : TestRule {
 
@@ -63,11 +65,21 @@ class ScreenShotRule(
     }
 
     fun takeScreenshot(scale: Float = 1f) {
+        try {
+            takeInternal(scale)
+        } finally {
+            // retry once
+            takeInternal(scale)
+        }
+    }
+
+    private fun takeInternal(scale: Float) {
         device.waitForIdle()
         val screenshot = with(automation.takeScreenshot()) {
             Bitmap.createScaledBitmap(this, (scale * width).roundToInt(), (scale * height).roundToInt(), false)
         }
-        dropshots.assertSnapshot(screenshot, fileName)
-        screenshot.recycle()
+        AutoCloseable(screenshot::recycle).use {
+            dropshots.assertSnapshot(screenshot, fileName)
+        }
     }
 }

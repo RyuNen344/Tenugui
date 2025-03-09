@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2017 The Android Open Source Project
- * Copyright (C) 2025-2025 RyuNen344
+ * Copyright (C) 2025 RyuNen344
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -64,7 +64,8 @@ public class BottomSheetDialogWrapper(
             R.style.Theme_Tenugui
         },
     ),
-), ViewRootForInspector {
+),
+    ViewRootForInspector {
 
     private val dialogLayout: BottomSheetDialogLayout
 
@@ -161,7 +162,7 @@ public class BottomSheetDialogWrapper(
 
                         BottomSheetBehavior.STATE_DRAGGING,
                         BottomSheetBehavior.STATE_SETTLING,
-                            -> {
+                        -> {
                             // noop
                         }
                     }
@@ -178,14 +179,14 @@ public class BottomSheetDialogWrapper(
 
                     BottomSheetBehavior.STATE_HALF_EXPANDED,
                     BottomSheetBehavior.STATE_HIDDEN,
-                        -> {
+                    -> {
                         behavior.state = BottomSheetBehavior.STATE_COLLAPSED
                     }
 
                     BottomSheetBehavior.STATE_COLLAPSED,
                     BottomSheetBehavior.STATE_DRAGGING,
                     BottomSheetBehavior.STATE_SETTLING,
-                        -> {
+                    -> {
                         // noop
                     }
                 }

@@ -20,7 +20,7 @@ detekt {
         include("**/*.kt", "**/*.kts")
         exclude("**/build/")
     }
-    baseline = rootProject.layout.projectDirectory.file(".lint/baseline.xml").asFile
+    baseline = rootProject.layout.projectDirectory.file(".lint/detekt-baseline.xml").asFile
 }
 
 tasks.withType(Detekt).configureEach {

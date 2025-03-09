@@ -9,9 +9,11 @@ dependencies {
     testImplementation libs.androidx.compose.ui.test.junit4
     testImplementation libs.androidx.compose.ui.test.manifest
     testImplementation libs.androidx.test.espresso.core
+    testImplementation libs.androidx.test.espresso.device
     testImplementation libs.androidx.test.uiautomator
     androidTestImplementation libs.androidx.compose.ui.test.junit4
     androidTestImplementation libs.androidx.compose.ui.test.manifest
     androidTestImplementation libs.androidx.test.espresso.core
+    androidTestImplementation libs.androidx.test.espresso.device
     androidTestImplementation libs.androidx.test.uiautomator
 }

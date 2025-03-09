@@ -1,0 +1,89 @@
+# $schema: https://json.schemastore.org/github-action.json
+name: "setup KVM and run androidTest"
+description: "setup KVM and run androidTest"
+inputs:
+  api-level:
+    description: 'API level of the platform and system image - e.g. 23 for Android Marshmallow, 29 for Android 10'
+    required: false
+    default: "34"
+  prepare-script:
+    description: "custom script to run before the main script - e.g. `./gradlew assembleDebugAndroidTest`"
+    required: false
+    default: ""
+  script:
+    description: "custom script to run - e.g. `./gradlew connectedDebugAndroidTest`"
+    required: true
+runs:
+  using: "composite"
+  steps:
+    - name: setup KVM
+      shell: bash
+      run: |
+        echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+        sudo udevadm control --reload-rules
+        sudo udevadm trigger --name-match=kvm
+
+    - name: setup cache key
+      id: cache-key
+      shell: bash
+      run: |
+        urlencode() {
+          local length="${#1}"
+          for (( i = 0; i < length; i++ )); do
+            local c="${1:i:1}"
+            case $c in
+              [a-zA-Z0-9~_-]) printf "$c" ;;
+              *) printf '%%%02X' "'$c" ;;
+            esac
+          done
+        };
+        
+        prepare_script=$(urlencode "${{ inputs.prepare-script }}")
+        script=$(urlencode "${{ inputs.script }}")
+        if [ -n "$prepare_script" ]; then
+          echo "key=${prepare_script}-${script}" >> $GITHUB_OUTPUT
+        else
+          echo "key=${script}" >> $GITHUB_OUTPUT
+        fi
+        echo $prepare_script
+        echo $script
+
+    - name: AVD cache
+      uses: actions/cache@v4
+      id: avd-cache
+      with:
+        path: |
+          ~/.android/avd/*
+          ~/.android/adb*
+        key: 'avd-${{ runner.os }}-${{ inputs.api-level }}-${{ steps.cache-key.outputs.key }}'
+
+    - name: create AVD and generate snapshot for caching
+      if: steps.avd-cache.outputs.cache-hit != 'true'
+      uses: reactivecircus/android-emulator-runner@v2
+      with:
+        api-level: ${{ inputs.api-level }}
+        target: google_apis_playstore
+        arch: x86_64
+        profile: pixel_7
+        force-avd-creation: false
+        emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+        disable-animations: false
+        script: echo "Generated AVD snapshot for caching."
+
+    - name: prepare script
+      shell: bash
+      if: ${{ inputs.prepare-script != '' }}
+      run: |
+        ${{ inputs.prepare-script }}
+
+    - name: run script
+      uses: reactivecircus/android-emulator-runner@v2
+      with:
+        api-level: ${{ inputs.api-level }}
+        target: google_apis_playstore
+        arch: x86_64
+        profile: pixel_7
+        force-avd-creation: false
+        emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
+        disable-animations: true
+        script: ${{ inputs.script }}
