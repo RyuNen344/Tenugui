@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2017 The Android Open Source Project
- * Copyright (C) 2025 RyuNen344
+ * Copyright (C) 2025-2025 RyuNen344
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -36,7 +36,7 @@ import org.junit.runners.model.Statement
 import java.util.concurrent.CountDownLatch
 import java.util.concurrent.TimeUnit
 
-class SystemUiRule : TestRule {
+class SystemUiRule(private val animate: Boolean = false) : TestRule {
 
     override fun apply(base: Statement, description: Description): Statement {
         return GrantPermissionRule
@@ -45,25 +45,46 @@ class SystemUiRule : TestRule {
                 object : Statement() {
                     override fun evaluate() {
                         val context = ApplicationProvider.getApplicationContext<Context>()
+                        val instrumentation = InstrumentationRegistry.getInstrumentation()
+                        val uiDevice = UiDevice.getInstance(instrumentation)
                         try {
-                            val instrumentation = InstrumentationRegistry.getInstrumentation()
-                            instrumentation.uiAutomation.executeShellCommand("cmd overlay enable-exclusive com.android.internal.systemui.navbar.gestural")
-                            instrumentation.uiAutomation.executeShellCommand("cmd overlay enable com.android.internal.emulation.pixel_8")
-                            context.demoMode(true)
-                            UiDevice.getInstance(instrumentation).waitForIdle()
+                            if (animate) {
+                                instrumentation.uiAutomation.enableAnimations()
+                            } else {
+                                instrumentation.uiAutomation.disableAnimations()
+                            }
+                            uiDevice.waitForIdle(3000)
+                            instrumentation.uiAutomation.configOverlay()
+                            uiDevice.waitForIdle(3000)
+                            instrumentation.uiAutomation.enableDemoMode()
                             context.sendOrderedBroadcast(
                                 listOf(
                                     Intent(ACTION_SYSTEM_UI_DEMO_MODE).apply { putExtras(COMMAND_ENTER) },
+                                    Intent(ACTION_SYSTEM_UI_DEMO_MODE).apply { putExtras(COMMAND_EXIT) },
+                                ),
+                            )
+                            context.sendOrderedBroadcast(
+                                listOf(
+                                    Intent(ACTION_SYSTEM_UI_DEMO_MODE).apply { putExtras(COMMAND_ENTER) },
+                                ),
+                            )
+                            uiDevice.waitForIdle(3000)
+                            context.sendOrderedBroadcast(
+                                listOf(
                                     Intent(ACTION_SYSTEM_UI_DEMO_MODE).apply { putExtras(COMMAND_STATUS) },
                                     Intent(ACTION_SYSTEM_UI_DEMO_MODE).apply { putExtras(COMMAND_NOTIFICATIONS) },
                                     Intent(ACTION_SYSTEM_UI_DEMO_MODE).apply { putExtras(COMMAND_CLOCK) },
                                 ),
                             )
-                            UiDevice.getInstance(instrumentation).waitForIdle()
+                            uiDevice.waitForIdle(TIMEOUT)
                             base.evaluate()
                         } finally {
                             context.sendBroadcast(Intent(ACTION_SYSTEM_UI_DEMO_MODE).apply { putExtras(COMMAND_EXIT) })
-                            context.demoMode(false)
+                            uiDevice.waitForIdle(3000)
+                            instrumentation.uiAutomation.disableAnimations()
+                            uiDevice.waitForIdle(3000)
+                            instrumentation.uiAutomation.disableDemoMode()
+                            uiDevice.waitForIdle(3000)
                         }
                     }
                 },
@@ -97,6 +118,7 @@ class SystemUiRule : TestRule {
     }
 
     private companion object {
+        const val TIMEOUT = 3000L
         const val SYSTEM_UI_DEMO_ALLOWED = "sysui_demo_allowed"
         const val SYSTEM_UI_TUNER_DEMO_ON = "sysui_tuner_demo_on"
         const val ACTION_SYSTEM_UI_DEMO_MODE = "com.android.systemui.demo"

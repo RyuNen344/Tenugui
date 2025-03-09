@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2017 The Android Open Source Project
- * Copyright (C) 2025 RyuNen344
+ * Copyright (C) 2025-2025 RyuNen344
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,7 +28,6 @@ import io.github.ryunen344.tenugui.BottomSheetDialog
 import io.github.ryunen344.tenugui.rememberBottomSheetBehaviorProperties
 import io.github.ryunen344.tenugui.rememberBottomSheetDialogProperties
 import io.github.ryunen344.tenugui.rememberBottomSheetDialogState
-import io.github.ryunen344.tenugui.tests.rule.AnimationsRule
 import io.github.ryunen344.tenugui.tests.rule.ScreenShotRule
 import io.github.ryunen344.tenugui.tests.rule.SystemUiRule
 import org.junit.Rule
@@ -38,13 +37,11 @@ import java.util.UUID
 
 @RunWith(AndroidJUnit4::class)
 class ExpandedTest {
+
     @get:Rule(order = 0)
-    val systemUiRule = SystemUiRule()
+    val systemUiRule = SystemUiRule(false)
 
     @get:Rule(order = 1)
-    val animationsRule = AnimationsRule(false)
-
-    @get:Rule(order = 2)
     val screenShotRule = ScreenShotRule()
 
     @Test
