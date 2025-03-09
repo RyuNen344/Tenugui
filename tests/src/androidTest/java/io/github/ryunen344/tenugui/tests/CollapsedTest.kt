@@ -20,6 +20,7 @@
 
 package io.github.ryunen344.tenugui.tests
 
+import android.view.WindowInsets.Type.ime
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.test.runAndroidComposeUiTest
@@ -117,6 +118,7 @@ class CollapsedTest {
                 )
             }
         }
+        activity?.window?.decorView?.getWindowInsetsController()?.show(ime())
         screenShotRule.takeScreenshot()
     }
 
@@ -189,6 +191,7 @@ class CollapsedTest {
                 )
             }
         }
+        activity?.window?.decorView?.getWindowInsetsController()?.show(ime())
         screenShotRule.takeScreenshot()
     }
 
@@ -270,6 +273,7 @@ class CollapsedTest {
                 )
             }
         }
+        activity?.window?.decorView?.getWindowInsetsController()?.show(ime())
         screenShotRule.takeScreenshot()
     }
 
@@ -351,6 +355,7 @@ class CollapsedTest {
                 )
             }
         }
+        activity?.window?.decorView?.getWindowInsetsController()?.show(ime())
         screenShotRule.takeScreenshot()
     }
 }
