@@ -130,8 +130,9 @@ class HalfExpandedTest {
                     LaunchedEffect(key1 = Unit) { state.behavior.setState(BottomSheetBehavior.STATE_HALF_EXPANDED) }
                 }
             }
-            mainClock.advanceTimeBy(3000L)
+            waitForIdle()
             activity?.window?.decorView?.getWindowInsetsController()?.show(ime())
+            screenShotRule.device.waitForIdle()
             screenShotRule.takeScreenshot()
         }
 
@@ -213,8 +214,9 @@ class HalfExpandedTest {
                     LaunchedEffect(key1 = Unit) { state.behavior.setState(BottomSheetBehavior.STATE_HALF_EXPANDED) }
                 }
             }
-            mainClock.advanceTimeBy(3000L)
+            waitForIdle()
             activity?.window?.decorView?.getWindowInsetsController()?.show(ime())
+            screenShotRule.device.waitForIdle()
             screenShotRule.takeScreenshot()
         }
 
@@ -305,8 +307,9 @@ class HalfExpandedTest {
                     LaunchedEffect(key1 = Unit) { state.behavior.setState(BottomSheetBehavior.STATE_HALF_EXPANDED) }
                 }
             }
-            mainClock.advanceTimeBy(3000L)
+            waitForIdle()
             activity?.window?.decorView?.getWindowInsetsController()?.show(ime())
+            screenShotRule.device.waitForIdle()
             screenShotRule.takeScreenshot()
         }
 
@@ -397,8 +400,9 @@ class HalfExpandedTest {
                     LaunchedEffect(key1 = Unit) { state.behavior.setState(BottomSheetBehavior.STATE_HALF_EXPANDED) }
                 }
             }
-            mainClock.advanceTimeBy(3000L)
+            waitForIdle()
             activity?.window?.decorView?.getWindowInsetsController()?.show(ime())
+            screenShotRule.device.waitForIdle()
             screenShotRule.takeScreenshot()
         }
 }

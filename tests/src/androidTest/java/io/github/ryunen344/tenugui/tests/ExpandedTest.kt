@@ -129,7 +129,9 @@ class ExpandedTest {
                     )
                 }
             }
+            waitForIdle()
             activity?.window?.decorView?.getWindowInsetsController()?.show(ime())
+            screenShotRule.device.waitForIdle()
             screenShotRule.takeScreenshot()
         }
 
@@ -221,7 +223,9 @@ class ExpandedTest {
                     )
                 }
             }
+            waitForIdle()
             activity?.window?.decorView?.getWindowInsetsController()?.show(ime())
+            screenShotRule.device.waitForIdle()
             screenShotRule.takeScreenshot()
         }
 
@@ -310,7 +314,9 @@ class ExpandedTest {
                     )
                 }
             }
+            waitForIdle()
             activity?.window?.decorView?.getWindowInsetsController()?.show(ime())
+            screenShotRule.device.waitForIdle()
             screenShotRule.takeScreenshot()
         }
 
@@ -408,7 +414,9 @@ class ExpandedTest {
                     )
                 }
             }
+            waitForIdle()
             activity?.window?.decorView?.getWindowInsetsController()?.show(ime())
+            screenShotRule.device.waitForIdle()
             screenShotRule.takeScreenshot()
         }
 }
