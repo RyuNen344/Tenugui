@@ -28,6 +28,8 @@ import io.github.ryunen344.tenugui.BottomSheetDialog
 import io.github.ryunen344.tenugui.rememberBottomSheetBehaviorProperties
 import io.github.ryunen344.tenugui.rememberBottomSheetDialogProperties
 import io.github.ryunen344.tenugui.rememberBottomSheetDialogState
+import io.github.ryunen344.tenugui.tests.rule.Retry
+import io.github.ryunen344.tenugui.tests.rule.RetryRule
 import io.github.ryunen344.tenugui.tests.rule.ScreenShotRule
 import io.github.ryunen344.tenugui.tests.rule.SystemUiRule
 import org.junit.Rule
@@ -43,7 +45,11 @@ class CollapsedTest {
     @get:Rule(order = 1)
     val screenShotRule = ScreenShotRule()
 
+    @get:Rule(order = 2)
+    val retry = RetryRule()
+
     @Test
+    @Retry
     fun testDefaultActivity_givenGatherContent() = runAndroidComposeUiTest<EmptyDefaultActivity> {
         screenShotRule.device.waitForIdle()
         setContent {
@@ -67,6 +73,7 @@ class CollapsedTest {
     }
 
     @Test
+    @Retry
     fun testDefaultActivity_givenGatherContent_whenHasEditText() = runAndroidComposeUiTest<EmptyDefaultActivity> {
         screenShotRule.device.waitForIdle()
         setContent {
@@ -90,6 +97,7 @@ class CollapsedTest {
     }
 
     @Test
+    @Retry
     fun testDefaultActivity_givenGatherContent_whenHasFocusedEditText() = runAndroidComposeUiTest<EmptyDefaultActivity> {
         screenShotRule.device.waitForIdle()
         setContent {
@@ -113,6 +121,7 @@ class CollapsedTest {
     }
 
     @Test
+    @Retry
     fun testDefaultActivity_givenSpreadContent() = runAndroidComposeUiTest<EmptyDefaultActivity> {
         screenShotRule.device.waitForIdle()
         setContent {
@@ -136,6 +145,7 @@ class CollapsedTest {
     }
 
     @Test
+    @Retry
     fun testDefaultActivity_givenSpreadContent_whenHasEditText() = runAndroidComposeUiTest<EmptyDefaultActivity> {
         screenShotRule.device.waitForIdle()
         setContent {
@@ -159,6 +169,7 @@ class CollapsedTest {
     }
 
     @Test
+    @Retry
     fun testDefaultActivity_givenSpreadContent_whenHasFocusedEditText() = runAndroidComposeUiTest<EmptyDefaultActivity> {
         screenShotRule.device.waitForIdle()
         setContent {
@@ -182,6 +193,7 @@ class CollapsedTest {
     }
 
     @Test
+    @Retry
     fun testEdgeToEdgeActivity_givenGatherContent() = runAndroidComposeUiTest<EmptyEdgeToEdgeActivity> {
         screenShotRule.device.waitForIdle()
         setContent {
@@ -208,6 +220,7 @@ class CollapsedTest {
     }
 
     @Test
+    @Retry
     fun testEdgeToEdgeActivity_givenGatherContent_whenHasEditText() = runAndroidComposeUiTest<EmptyEdgeToEdgeActivity> {
         screenShotRule.device.waitForIdle()
         setContent {
@@ -234,6 +247,7 @@ class CollapsedTest {
     }
 
     @Test
+    @Retry
     fun testEdgeToEdgeActivity_givenGatherContent_whenHasFocusedEditText() = runAndroidComposeUiTest<EmptyEdgeToEdgeActivity> {
         screenShotRule.device.waitForIdle()
         setContent {
@@ -260,6 +274,7 @@ class CollapsedTest {
     }
 
     @Test
+    @Retry
     fun testEdgeToEdgeActivity_givenSpreadContent() = runAndroidComposeUiTest<EmptyEdgeToEdgeActivity> {
         screenShotRule.device.waitForIdle()
         setContent {
@@ -286,6 +301,7 @@ class CollapsedTest {
     }
 
     @Test
+    @Retry
     fun testEdgeToEdgeActivity_givenSpreadContent_whenHasEditText() = runAndroidComposeUiTest<EmptyEdgeToEdgeActivity> {
         screenShotRule.device.waitForIdle()
         setContent {
@@ -312,6 +328,7 @@ class CollapsedTest {
     }
 
     @Test
+    @Retry
     fun testEdgeToEdgeActivity_givenSpreadContent_whenHasFocusedEditText() = runAndroidComposeUiTest<EmptyEdgeToEdgeActivity> {
         screenShotRule.device.waitForIdle()
         setContent {
