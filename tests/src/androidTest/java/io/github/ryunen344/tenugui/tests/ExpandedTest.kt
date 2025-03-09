@@ -132,7 +132,7 @@ class ExpandedTest {
             waitForIdle()
             activity?.window?.decorView?.getWindowInsetsController()?.show(WindowInsets.Type.ime())
             screenShotRule.device.waitForIdle()
-            waitUntil { activity?.window?.decorView?.rootWindowInsets?.isVisible(WindowInsets.Type.ime()) == true }
+            waitUntilImeShown()
             screenShotRule.takeScreenshot()
         }
 
@@ -227,7 +227,7 @@ class ExpandedTest {
             waitForIdle()
             activity?.window?.decorView?.getWindowInsetsController()?.show(WindowInsets.Type.ime())
             screenShotRule.device.waitForIdle()
-            waitUntil { activity?.window?.decorView?.rootWindowInsets?.isVisible(WindowInsets.Type.ime()) == true }
+            waitUntilImeShown()
             screenShotRule.takeScreenshot()
         }
 
@@ -319,7 +319,7 @@ class ExpandedTest {
             waitForIdle()
             activity?.window?.decorView?.getWindowInsetsController()?.show(WindowInsets.Type.ime())
             screenShotRule.device.waitForIdle()
-            waitUntil { activity?.window?.decorView?.rootWindowInsets?.isVisible(WindowInsets.Type.ime()) == true }
+            waitUntilImeShown()
             screenShotRule.takeScreenshot()
         }
 
@@ -420,7 +420,7 @@ class ExpandedTest {
             waitForIdle()
             activity?.window?.decorView?.getWindowInsetsController()?.show(WindowInsets.Type.ime())
             screenShotRule.device.waitForIdle()
-            waitUntil { activity?.window?.decorView?.rootWindowInsets?.isVisible(WindowInsets.Type.ime()) == true }
+            waitUntilImeShown()
             screenShotRule.takeScreenshot()
         }
 }

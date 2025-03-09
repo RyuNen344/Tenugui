@@ -20,6 +20,7 @@
 
 package io.github.ryunen344.tenugui.tests
 
+import android.view.WindowInsets
 import androidx.activity.ComponentActivity
 import androidx.compose.ui.test.AndroidComposeUiTest
 import androidx.compose.ui.test.ComposeUiTest
@@ -53,4 +54,10 @@ fun <A : ComponentActivity> runSuspendAndroidComposeUiTest(
         effectContext = coroutineContext,
         block = { block(this@runTest) },
     )
+}
+
+fun <A : ComponentActivity> AndroidComposeUiTest<A>.waitUntilImeShown() {
+    waitUntil(timeoutMillis = 10000L) {
+        activity?.window?.decorView?.rootWindowInsets?.isVisible(WindowInsets.Type.ime()) == true
+    }
 }
