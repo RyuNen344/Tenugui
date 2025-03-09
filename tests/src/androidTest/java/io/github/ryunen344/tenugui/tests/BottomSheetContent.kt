@@ -248,9 +248,9 @@ internal val SpreadFocusedTextFieldBottomSheetContent: @Composable () -> Unit = 
             modifier = Modifier.padding(16.dp),
             text = "last item",
         )
+    }
 
-        LaunchedEffect(Unit) {
-            focusRequester.requestFocus()
-        }
+    LaunchedEffect(Unit) {
+        focusRequester.requestFocus()
     }
 }
