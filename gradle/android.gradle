@@ -23,6 +23,7 @@ android {
         checkReleaseBuilds = false
         sarifReport = true
         baseline = rootProject.layout.projectDirectory.file(".lint/android-baseline.xml")
+        abortOnError = !project.providers.gradleProperty("abortOnError").present
     }
 }
 
