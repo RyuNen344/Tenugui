@@ -37,7 +37,7 @@ class ScreenShotRule(
     val dropshots: Dropshots = Dropshots(
         filenameFunc = { it },
         imageComparator = SimpleImageComparator(maxDistance = 0.5f),
-        resultValidator = ThresholdValidator(threshold = 0.15f),
+        resultValidator = ThresholdValidator(threshold = 0.0025f),  // 0.25%
     ),
 ) : TestRule {
 
