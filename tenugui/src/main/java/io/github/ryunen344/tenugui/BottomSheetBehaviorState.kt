@@ -62,7 +62,7 @@ public class BottomSheetBehaviorState(
         behavior()?.let {
             // delay for internal layout calculation
             @Suppress("MagicNumber")
-            delay(250)
+            delay(300)
             mutex.withLock {
                 it.state = state
             }
