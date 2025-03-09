@@ -56,6 +56,10 @@ fun <A : ComponentActivity> runSuspendAndroidComposeUiTest(
     )
 }
 
+fun <A : ComponentActivity> AndroidComposeUiTest<A>.showIme() {
+    activity?.window?.decorView?.getWindowInsetsController()?.show(WindowInsets.Type.ime())
+}
+
 fun <A : ComponentActivity> AndroidComposeUiTest<A>.waitUntilImeShown() {
     waitUntil(timeoutMillis = 10000L) {
         activity?.window?.decorView?.rootWindowInsets?.isVisible(WindowInsets.Type.ime()) == true

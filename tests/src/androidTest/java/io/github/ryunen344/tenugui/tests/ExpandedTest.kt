@@ -20,7 +20,6 @@
 
 package io.github.ryunen344.tenugui.tests
 
-import android.view.WindowInsets
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.test.runAndroidComposeUiTest
@@ -130,7 +129,7 @@ class ExpandedTest {
                 }
             }
             waitForIdle()
-            activity?.window?.decorView?.getWindowInsetsController()?.show(WindowInsets.Type.ime())
+            showIme()
             screenShotRule.device.waitForIdle()
             waitUntilImeShown()
             screenShotRule.takeScreenshot()
@@ -225,7 +224,7 @@ class ExpandedTest {
                 }
             }
             waitForIdle()
-            activity?.window?.decorView?.getWindowInsetsController()?.show(WindowInsets.Type.ime())
+            showIme()
             screenShotRule.device.waitForIdle()
             waitUntilImeShown()
             screenShotRule.takeScreenshot()
@@ -317,7 +316,7 @@ class ExpandedTest {
                 }
             }
             waitForIdle()
-            activity?.window?.decorView?.getWindowInsetsController()?.show(WindowInsets.Type.ime())
+            showIme()
             screenShotRule.device.waitForIdle()
             waitUntilImeShown()
             screenShotRule.takeScreenshot()
@@ -418,7 +417,7 @@ class ExpandedTest {
                 }
             }
             waitForIdle()
-            activity?.window?.decorView?.getWindowInsetsController()?.show(WindowInsets.Type.ime())
+            showIme()
             screenShotRule.device.waitForIdle()
             waitUntilImeShown()
             screenShotRule.takeScreenshot()
