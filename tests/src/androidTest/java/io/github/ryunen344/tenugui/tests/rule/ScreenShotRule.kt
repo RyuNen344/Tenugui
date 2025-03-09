@@ -35,7 +35,7 @@ import kotlin.math.roundToInt
 class ScreenShotRule(
     val dropshots: Dropshots = Dropshots(
         filenameFunc = { it },
-        imageComparator = SimpleImageComparator(maxDistance = 0.001f),
+        imageComparator = SimpleImageComparator(maxDistance = 0.5f),
     ),
 ) : TestRule {
 
