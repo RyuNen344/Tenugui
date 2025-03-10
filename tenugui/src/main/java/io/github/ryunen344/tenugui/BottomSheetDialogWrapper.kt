@@ -163,7 +163,7 @@ public class BottomSheetDialogWrapper(
 
                         BottomSheetBehavior.STATE_DRAGGING,
                         BottomSheetBehavior.STATE_SETTLING,
-                            -> {
+                        -> {
                             // noop
                         }
                     }
@@ -180,14 +180,14 @@ public class BottomSheetDialogWrapper(
 
                     BottomSheetBehavior.STATE_HALF_EXPANDED,
                     BottomSheetBehavior.STATE_HIDDEN,
-                        -> {
+                    -> {
                         behavior.state = BottomSheetBehavior.STATE_COLLAPSED
                     }
 
                     BottomSheetBehavior.STATE_COLLAPSED,
                     BottomSheetBehavior.STATE_DRAGGING,
                     BottomSheetBehavior.STATE_SETTLING,
-                        -> {
+                    -> {
                         // noop
                     }
                 }
