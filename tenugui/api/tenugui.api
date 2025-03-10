@@ -87,7 +87,7 @@ public final class io/github/ryunen344/tenugui/BottomSheetBehaviorState {
 }
 
 public final class io/github/ryunen344/tenugui/BottomSheetDialogKt {
-	public static final fun BottomSheetDialog (Lkotlin/jvm/functions/Function0;Ljava/lang/String;Lio/github/ryunen344/tenugui/BottomSheetDialogState;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
+	public static final fun BottomSheetDialog (Lkotlin/jvm/functions/Function0;Ljava/util/UUID;Lio/github/ryunen344/tenugui/BottomSheetDialogState;Lkotlin/jvm/functions/Function2;Landroidx/compose/runtime/Composer;II)V
 }
 
 public final class io/github/ryunen344/tenugui/BottomSheetDialogProperties : android/os/Parcelable {
@@ -172,13 +172,13 @@ public final class io/github/ryunen344/tenugui/BottomSheetDialogState$SavedState
 }
 
 public final class io/github/ryunen344/tenugui/BottomSheetDialogStateKt {
-	public static final fun rememberBottomSheetDialogState (Ljava/lang/String;Landroid/os/Bundle;Landroid/os/Parcelable;Lio/github/ryunen344/tenugui/BottomSheetDialogProperties;Lio/github/ryunen344/tenugui/BottomSheetBehaviorProperties;Landroidx/compose/runtime/Composer;II)Lio/github/ryunen344/tenugui/BottomSheetDialogState;
+	public static final fun rememberBottomSheetDialogState (Ljava/util/UUID;Ljava/lang/String;Landroid/os/Bundle;Landroid/os/Parcelable;Lio/github/ryunen344/tenugui/BottomSheetDialogProperties;Lio/github/ryunen344/tenugui/BottomSheetBehaviorProperties;Landroidx/compose/runtime/Composer;II)Lio/github/ryunen344/tenugui/BottomSheetDialogState;
 	public static final fun rememberBottomSheetDialogState-MV32uAI (Ljava/lang/String;Landroid/os/Bundle;Landroid/os/Parcelable;ZZZZLandroidx/compose/ui/window/SecureFlagPolicy;ZFZIIIFIZZZIIFLandroidx/compose/runtime/Composer;IIII)Lio/github/ryunen344/tenugui/BottomSheetDialogState;
 }
 
 public final class io/github/ryunen344/tenugui/BottomSheetDialogWrapper : com/google/android/material/bottomsheet/BottomSheetDialog, androidx/compose/ui/platform/ViewRootForInspector {
 	public static final field $stable I
-	public fun <init> (Lkotlin/jvm/functions/Function0;Lio/github/ryunen344/tenugui/BottomSheetDialogProperties;Landroid/view/View;Landroidx/compose/ui/unit/LayoutDirection;Landroidx/compose/ui/unit/Density;Ljava/lang/String;)V
+	public fun <init> (Lkotlin/jvm/functions/Function0;Lio/github/ryunen344/tenugui/BottomSheetDialogProperties;Landroid/view/View;Landroidx/compose/ui/unit/LayoutDirection;Landroidx/compose/ui/unit/Density;Ljava/util/UUID;)V
 	public fun cancel ()V
 	public final fun disposeComposition ()V
 	public final fun getBottomSheet ()Landroid/widget/FrameLayout;

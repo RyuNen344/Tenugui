@@ -47,8 +47,8 @@ import java.util.UUID
 @Composable
 public fun BottomSheetDialog(
     onDismissRequest: () -> Unit,
-    dialogId: String = rememberSaveable { UUID.randomUUID().toString() },
-    state: BottomSheetDialogState = rememberBottomSheetDialogState(key = dialogId),
+    dialogId: UUID = rememberSaveable { UUID.randomUUID() },
+    state: BottomSheetDialogState = rememberBottomSheetDialogState(dialogId = dialogId),
     content: @Composable () -> Unit,
 ) {
     val view = LocalView.current

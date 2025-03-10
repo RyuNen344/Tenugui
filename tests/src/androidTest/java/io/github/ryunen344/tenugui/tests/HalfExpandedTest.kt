@@ -57,11 +57,11 @@ class HalfExpandedTest {
         screenShotRule.device.waitForIdle()
         setContent {
             MaterialTheme {
-                val dialogId = rememberSaveable { UUID.randomUUID().toString() }
+                val dialogId = rememberSaveable { UUID.randomUUID() }
                 val state = rememberBottomSheetDialogState(
-                    key = dialogId,
-                    dialogProperties = rememberBottomSheetDialogProperties(key = dialogId),
-                    behaviorProperties = rememberBottomSheetBehaviorProperties(key = dialogId),
+                    dialogId = dialogId,
+                    dialogProperties = rememberBottomSheetDialogProperties(),
+                    behaviorProperties = rememberBottomSheetBehaviorProperties(),
                 )
 
                 BottomSheetDialog(
@@ -84,11 +84,11 @@ class HalfExpandedTest {
         screenShotRule.device.waitForIdle()
         setContent {
             MaterialTheme {
-                val dialogId = rememberSaveable { UUID.randomUUID().toString() }
+                val dialogId = rememberSaveable { UUID.randomUUID() }
                 val state = rememberBottomSheetDialogState(
-                    key = dialogId,
-                    dialogProperties = rememberBottomSheetDialogProperties(key = dialogId),
-                    behaviorProperties = rememberBottomSheetBehaviorProperties(key = dialogId),
+                    dialogId = dialogId,
+                    dialogProperties = rememberBottomSheetDialogProperties(),
+                    behaviorProperties = rememberBottomSheetBehaviorProperties(),
                 )
 
                 BottomSheetDialog(
@@ -112,11 +112,11 @@ class HalfExpandedTest {
             screenShotRule.device.waitForIdle()
             setContent {
                 MaterialTheme {
-                    val dialogId = rememberSaveable { UUID.randomUUID().toString() }
+                    val dialogId = rememberSaveable { UUID.randomUUID() }
                     val state = rememberBottomSheetDialogState(
-                        key = dialogId,
-                        dialogProperties = rememberBottomSheetDialogProperties(key = dialogId),
-                        behaviorProperties = rememberBottomSheetBehaviorProperties(key = dialogId),
+                        dialogId = dialogId,
+                        dialogProperties = rememberBottomSheetDialogProperties(),
+                        behaviorProperties = rememberBottomSheetBehaviorProperties(),
                     )
 
                     BottomSheetDialog(
@@ -142,11 +142,11 @@ class HalfExpandedTest {
         screenShotRule.device.waitForIdle()
         setContent {
             MaterialTheme {
-                val dialogId = rememberSaveable { UUID.randomUUID().toString() }
+                val dialogId = rememberSaveable { UUID.randomUUID() }
                 val state = rememberBottomSheetDialogState(
-                    key = dialogId,
-                    dialogProperties = rememberBottomSheetDialogProperties(key = dialogId),
-                    behaviorProperties = rememberBottomSheetBehaviorProperties(key = dialogId),
+                    dialogId = dialogId,
+                    dialogProperties = rememberBottomSheetDialogProperties(),
+                    behaviorProperties = rememberBottomSheetBehaviorProperties(),
                 )
 
                 BottomSheetDialog(
@@ -169,11 +169,11 @@ class HalfExpandedTest {
         screenShotRule.device.waitForIdle()
         setContent {
             MaterialTheme {
-                val dialogId = rememberSaveable { UUID.randomUUID().toString() }
+                val dialogId = rememberSaveable { UUID.randomUUID() }
                 val state = rememberBottomSheetDialogState(
-                    key = dialogId,
-                    dialogProperties = rememberBottomSheetDialogProperties(key = dialogId),
-                    behaviorProperties = rememberBottomSheetBehaviorProperties(key = dialogId),
+                    dialogId = dialogId,
+                    dialogProperties = rememberBottomSheetDialogProperties(),
+                    behaviorProperties = rememberBottomSheetBehaviorProperties(),
                 )
 
                 BottomSheetDialog(
@@ -197,11 +197,11 @@ class HalfExpandedTest {
             screenShotRule.device.waitForIdle()
             setContent {
                 MaterialTheme {
-                    val dialogId = rememberSaveable { UUID.randomUUID().toString() }
+                    val dialogId = rememberSaveable { UUID.randomUUID() }
                     val state = rememberBottomSheetDialogState(
-                        key = dialogId,
-                        dialogProperties = rememberBottomSheetDialogProperties(key = dialogId),
-                        behaviorProperties = rememberBottomSheetBehaviorProperties(key = dialogId),
+                        dialogId = dialogId,
+                        dialogProperties = rememberBottomSheetDialogProperties(),
+                        behaviorProperties = rememberBottomSheetBehaviorProperties(),
                     )
 
                     BottomSheetDialog(
@@ -227,14 +227,13 @@ class HalfExpandedTest {
         screenShotRule.device.waitForIdle()
         setContent {
             MaterialTheme {
-                val dialogId = rememberSaveable { UUID.randomUUID().toString() }
+                val dialogId = rememberSaveable { UUID.randomUUID() }
                 val state = rememberBottomSheetDialogState(
-                    key = dialogId,
+                    dialogId = dialogId,
                     dialogProperties = rememberBottomSheetDialogProperties(
-                        key = dialogId,
                         decorFitsSystemWindows = false,
                     ),
-                    behaviorProperties = rememberBottomSheetBehaviorProperties(key = dialogId),
+                    behaviorProperties = rememberBottomSheetBehaviorProperties(),
                 )
 
                 BottomSheetDialog(
@@ -257,14 +256,13 @@ class HalfExpandedTest {
         screenShotRule.device.waitForIdle()
         setContent {
             MaterialTheme {
-                val dialogId = rememberSaveable { UUID.randomUUID().toString() }
+                val dialogId = rememberSaveable { UUID.randomUUID() }
                 val state = rememberBottomSheetDialogState(
-                    key = dialogId,
+                    dialogId = dialogId,
                     dialogProperties = rememberBottomSheetDialogProperties(
-                        key = dialogId,
                         decorFitsSystemWindows = false,
                     ),
-                    behaviorProperties = rememberBottomSheetBehaviorProperties(key = dialogId),
+                    behaviorProperties = rememberBottomSheetBehaviorProperties(),
                 )
 
                 BottomSheetDialog(
@@ -288,14 +286,13 @@ class HalfExpandedTest {
             screenShotRule.device.waitForIdle()
             setContent {
                 MaterialTheme {
-                    val dialogId = rememberSaveable { UUID.randomUUID().toString() }
+                    val dialogId = rememberSaveable { UUID.randomUUID() }
                     val state = rememberBottomSheetDialogState(
-                        key = dialogId,
+                        dialogId = dialogId,
                         dialogProperties = rememberBottomSheetDialogProperties(
-                            key = dialogId,
                             decorFitsSystemWindows = false,
                         ),
-                        behaviorProperties = rememberBottomSheetBehaviorProperties(key = dialogId),
+                        behaviorProperties = rememberBottomSheetBehaviorProperties(),
                     )
 
                     BottomSheetDialog(
@@ -321,14 +318,13 @@ class HalfExpandedTest {
         screenShotRule.device.waitForIdle()
         setContent {
             MaterialTheme {
-                val dialogId = rememberSaveable { UUID.randomUUID().toString() }
+                val dialogId = rememberSaveable { UUID.randomUUID() }
                 val state = rememberBottomSheetDialogState(
-                    key = dialogId,
+                    dialogId = dialogId,
                     dialogProperties = rememberBottomSheetDialogProperties(
-                        key = dialogId,
                         decorFitsSystemWindows = false,
                     ),
-                    behaviorProperties = rememberBottomSheetBehaviorProperties(key = dialogId),
+                    behaviorProperties = rememberBottomSheetBehaviorProperties(),
                 )
 
                 BottomSheetDialog(
@@ -351,14 +347,13 @@ class HalfExpandedTest {
         screenShotRule.device.waitForIdle()
         setContent {
             MaterialTheme {
-                val dialogId = rememberSaveable { UUID.randomUUID().toString() }
+                val dialogId = rememberSaveable { UUID.randomUUID() }
                 val state = rememberBottomSheetDialogState(
-                    key = dialogId,
+                    dialogId = dialogId,
                     dialogProperties = rememberBottomSheetDialogProperties(
-                        key = dialogId,
                         decorFitsSystemWindows = false,
                     ),
-                    behaviorProperties = rememberBottomSheetBehaviorProperties(key = dialogId),
+                    behaviorProperties = rememberBottomSheetBehaviorProperties(),
                 )
 
                 BottomSheetDialog(
@@ -382,14 +377,13 @@ class HalfExpandedTest {
             screenShotRule.device.waitForIdle()
             setContent {
                 MaterialTheme {
-                    val dialogId = rememberSaveable { UUID.randomUUID().toString() }
+                    val dialogId = rememberSaveable { UUID.randomUUID() }
                     val state = rememberBottomSheetDialogState(
-                        key = dialogId,
+                        dialogId = dialogId,
                         dialogProperties = rememberBottomSheetDialogProperties(
-                            key = dialogId,
                             decorFitsSystemWindows = false,
                         ),
-                        behaviorProperties = rememberBottomSheetBehaviorProperties(key = dialogId),
+                        behaviorProperties = rememberBottomSheetBehaviorProperties(),
                     )
 
                     BottomSheetDialog(

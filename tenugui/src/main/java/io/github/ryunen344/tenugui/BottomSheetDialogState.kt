@@ -41,6 +41,7 @@ import io.github.ryunen344.tenugui.BottomSheetBehaviorProperties.Companion.DEFAU
 import io.github.ryunen344.tenugui.BottomSheetBehaviorProperties.Companion.HIDE_FRICTION
 import io.github.ryunen344.tenugui.BottomSheetBehaviorProperties.Companion.NO_MAX_SIZE
 import kotlinx.parcelize.Parcelize
+import java.util.UUID
 
 @Stable
 public class BottomSheetDialogState(
@@ -155,13 +156,14 @@ public class BottomSheetDialogState(
 
 @Composable
 public fun rememberBottomSheetDialogState(
+    dialogId: UUID,
     key: String? = null,
     dialogState: Bundle? = null,
     behaviorState: Parcelable? = null,
     dialogProperties: BottomSheetDialogProperties = rememberBottomSheetDialogProperties(key = key),
     behaviorProperties: BottomSheetBehaviorProperties = rememberBottomSheetBehaviorProperties(key = key),
 ): BottomSheetDialogState {
-    return rememberSaveable(dialogProperties, behaviorProperties, saver = BottomSheetDialogStateSaver, key = key) {
+    return rememberSaveable(dialogId, dialogProperties, behaviorProperties, saver = BottomSheetDialogStateSaver, key = key) {
         BottomSheetDialogState(
             savedState = BottomSheetDialogState.SavedState(dialogState, behaviorState),
             dialogProperties = dialogProperties,

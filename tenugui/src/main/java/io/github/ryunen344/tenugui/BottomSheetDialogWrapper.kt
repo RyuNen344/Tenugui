@@ -47,6 +47,7 @@ import androidx.savedstate.setViewTreeSavedStateRegistryOwner
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.motion.MaterialBackOrchestrator
+import java.util.UUID
 
 public class BottomSheetDialogWrapper(
     private var onDismissRequest: () -> Unit,
@@ -54,7 +55,7 @@ public class BottomSheetDialogWrapper(
     private val view: View,
     layoutDirection: LayoutDirection,
     density: Density,
-    dialogId: String,
+    dialogId: UUID,
 ) : BottomSheetDialog(
     ContextThemeWrapper(
         view.context,
@@ -162,7 +163,7 @@ public class BottomSheetDialogWrapper(
 
                         BottomSheetBehavior.STATE_DRAGGING,
                         BottomSheetBehavior.STATE_SETTLING,
-                        -> {
+                            -> {
                             // noop
                         }
                     }
@@ -179,14 +180,14 @@ public class BottomSheetDialogWrapper(
 
                     BottomSheetBehavior.STATE_HALF_EXPANDED,
                     BottomSheetBehavior.STATE_HIDDEN,
-                    -> {
+                        -> {
                         behavior.state = BottomSheetBehavior.STATE_COLLAPSED
                     }
 
                     BottomSheetBehavior.STATE_COLLAPSED,
                     BottomSheetBehavior.STATE_DRAGGING,
                     BottomSheetBehavior.STATE_SETTLING,
-                    -> {
+                        -> {
                         // noop
                     }
                 }

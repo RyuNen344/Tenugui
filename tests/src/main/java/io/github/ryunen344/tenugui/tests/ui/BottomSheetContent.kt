@@ -98,14 +98,9 @@ fun BottomSheetContent(decorFitsSystemWindows: Boolean) {
     }
 
     if (visible) {
-        val dialogId = rememberSaveable { UUID.randomUUID().toString() }
+        val dialogId = rememberSaveable { UUID.randomUUID() }
         LocalDensity.current
-        val bottomSheetDialogState =
-            rememberBottomSheetDialogState(
-                key = dialogId,
-                decorFitsSystemWindows = decorFitsSystemWindows,
-            )
-
+        val bottomSheetDialogState = rememberBottomSheetDialogState(decorFitsSystemWindows = decorFitsSystemWindows)
         val behaviorState by bottomSheetDialogState.behavior.getState()
 
         LaunchedEffect(behaviorState) {
