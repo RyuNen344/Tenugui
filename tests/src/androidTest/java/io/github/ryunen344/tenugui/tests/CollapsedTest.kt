@@ -56,7 +56,6 @@ class CollapsedTest {
             MaterialTheme {
                 val dialogId = rememberSaveable { UUID.randomUUID() }
                 val state = rememberBottomSheetDialogState(
-                    dialogId = dialogId,
                     dialogProperties = rememberBottomSheetDialogProperties(),
                     behaviorProperties = rememberBottomSheetBehaviorProperties(),
                 )
@@ -80,7 +79,6 @@ class CollapsedTest {
             MaterialTheme {
                 val dialogId = rememberSaveable { UUID.randomUUID() }
                 val state = rememberBottomSheetDialogState(
-                    dialogId = dialogId,
                     dialogProperties = rememberBottomSheetDialogProperties(),
                     behaviorProperties = rememberBottomSheetBehaviorProperties(),
                 )
@@ -104,7 +102,6 @@ class CollapsedTest {
             MaterialTheme {
                 val dialogId = rememberSaveable { UUID.randomUUID() }
                 val state = rememberBottomSheetDialogState(
-                    dialogId = dialogId,
                     dialogProperties = rememberBottomSheetDialogProperties(),
                     behaviorProperties = rememberBottomSheetBehaviorProperties(),
                 )
@@ -132,7 +129,6 @@ class CollapsedTest {
             MaterialTheme {
                 val dialogId = rememberSaveable { UUID.randomUUID() }
                 val state = rememberBottomSheetDialogState(
-                    dialogId = dialogId,
                     dialogProperties = rememberBottomSheetDialogProperties(),
                     behaviorProperties = rememberBottomSheetBehaviorProperties(),
                 )
@@ -156,7 +152,6 @@ class CollapsedTest {
             MaterialTheme {
                 val dialogId = rememberSaveable { UUID.randomUUID() }
                 val state = rememberBottomSheetDialogState(
-                    dialogId = dialogId,
                     dialogProperties = rememberBottomSheetDialogProperties(),
                     behaviorProperties = rememberBottomSheetBehaviorProperties(),
                 )
@@ -180,7 +175,6 @@ class CollapsedTest {
             MaterialTheme {
                 val dialogId = rememberSaveable { UUID.randomUUID() }
                 val state = rememberBottomSheetDialogState(
-                    dialogId = dialogId,
                     dialogProperties = rememberBottomSheetDialogProperties(),
                     behaviorProperties = rememberBottomSheetBehaviorProperties(),
                 )
@@ -208,7 +202,6 @@ class CollapsedTest {
             MaterialTheme {
                 val dialogId = rememberSaveable { UUID.randomUUID() }
                 val state = rememberBottomSheetDialogState(
-                    dialogId = dialogId,
                     dialogProperties = rememberBottomSheetDialogProperties(
                         decorFitsSystemWindows = false,
                     ),
@@ -234,7 +227,6 @@ class CollapsedTest {
             MaterialTheme {
                 val dialogId = rememberSaveable { UUID.randomUUID() }
                 val state = rememberBottomSheetDialogState(
-                    dialogId = dialogId,
                     dialogProperties = rememberBottomSheetDialogProperties(
                         decorFitsSystemWindows = false,
                     ),
@@ -260,7 +252,6 @@ class CollapsedTest {
             MaterialTheme {
                 val dialogId = rememberSaveable { UUID.randomUUID() }
                 val state = rememberBottomSheetDialogState(
-                    dialogId = dialogId,
                     dialogProperties = rememberBottomSheetDialogProperties(
                         decorFitsSystemWindows = false,
                     ),
@@ -290,7 +281,6 @@ class CollapsedTest {
             MaterialTheme {
                 val dialogId = rememberSaveable { UUID.randomUUID() }
                 val state = rememberBottomSheetDialogState(
-                    dialogId = dialogId,
                     dialogProperties = rememberBottomSheetDialogProperties(
                         decorFitsSystemWindows = false,
                     ),
@@ -316,7 +306,6 @@ class CollapsedTest {
             MaterialTheme {
                 val dialogId = rememberSaveable { UUID.randomUUID() }
                 val state = rememberBottomSheetDialogState(
-                    dialogId = dialogId,
                     dialogProperties = rememberBottomSheetDialogProperties(
                         decorFitsSystemWindows = false,
                     ),
@@ -342,7 +331,6 @@ class CollapsedTest {
             MaterialTheme {
                 val dialogId = rememberSaveable { UUID.randomUUID() }
                 val state = rememberBottomSheetDialogState(
-                    dialogId = dialogId,
                     dialogProperties = rememberBottomSheetDialogProperties(
                         decorFitsSystemWindows = false,
                     ),
