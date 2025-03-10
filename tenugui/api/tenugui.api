@@ -172,7 +172,7 @@ public final class io/github/ryunen344/tenugui/BottomSheetDialogState$SavedState
 }
 
 public final class io/github/ryunen344/tenugui/BottomSheetDialogStateKt {
-	public static final fun rememberBottomSheetDialogState (Ljava/util/UUID;Ljava/lang/String;Landroid/os/Bundle;Landroid/os/Parcelable;Lio/github/ryunen344/tenugui/BottomSheetDialogProperties;Lio/github/ryunen344/tenugui/BottomSheetBehaviorProperties;Landroidx/compose/runtime/Composer;II)Lio/github/ryunen344/tenugui/BottomSheetDialogState;
+	public static final fun rememberBottomSheetDialogState (Ljava/lang/String;Landroid/os/Bundle;Landroid/os/Parcelable;Lio/github/ryunen344/tenugui/BottomSheetDialogProperties;Lio/github/ryunen344/tenugui/BottomSheetBehaviorProperties;Landroidx/compose/runtime/Composer;II)Lio/github/ryunen344/tenugui/BottomSheetDialogState;
 	public static final fun rememberBottomSheetDialogState-MV32uAI (Ljava/lang/String;Landroid/os/Bundle;Landroid/os/Parcelable;ZZZZLandroidx/compose/ui/window/SecureFlagPolicy;ZFZIIIFIZZZIIFLandroidx/compose/runtime/Composer;IIII)Lio/github/ryunen344/tenugui/BottomSheetDialogState;
 }
 
