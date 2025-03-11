@@ -57,8 +57,7 @@ import java.util.UUID
 @Composable
 fun BottomSheetContent(decorFitsSystemWindows: Boolean) {
     var visible by rememberSaveable { mutableStateOf(false) }
-
-
+    
     Scaffold { innerPadding ->
         Column(
             modifier = Modifier
