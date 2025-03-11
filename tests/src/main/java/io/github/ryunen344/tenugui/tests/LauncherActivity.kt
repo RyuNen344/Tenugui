@@ -28,6 +28,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
@@ -44,6 +45,7 @@ class LauncherActivity : AppCompatActivity() {
                 Scaffold {
                     Column(
                         modifier = Modifier
+                            .safeDrawingPadding()
                             .fillMaxSize()
                             .padding(it),
                         verticalArrangement = Arrangement.spacedBy(24.dp),

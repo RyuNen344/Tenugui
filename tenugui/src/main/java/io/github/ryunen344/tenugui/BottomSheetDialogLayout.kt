@@ -27,6 +27,7 @@ import androidx.compose.runtime.CompositionContext
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.InternalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.Layout
 import androidx.compose.ui.platform.AbstractComposeView
@@ -46,10 +47,12 @@ internal class BottomSheetDialogLayout(
     override var shouldCreateCompositionOnAttachedToWindow: Boolean = false
         private set
 
+    @OptIn(InternalComposeUiApi::class)
     fun setContent(parent: CompositionContext, content: @Composable () -> Unit) {
         setParentCompositionContext(parent)
         this.content = content
         shouldCreateCompositionOnAttachedToWindow = true
+        createComposition()
     }
 
     @Composable
