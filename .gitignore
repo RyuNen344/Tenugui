@@ -11,6 +11,7 @@
 .idea/artifacts
 .idea/AndroidProjectSystem.xml
 .idea/androidTestResultsUserPreferences.xml
+.idea/appInsightsSettings.xml
 .idea/compiler.xml
 .idea/inspectionProfiles
 .idea/deploymentTargetSelector.xml
