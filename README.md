@@ -1,6 +1,6 @@
 # Tenugui
 
-Tenugui is ModalBottomSheet Wrapper for Jetpack Compose.
+Tenugui is a ModalBottomSheet wrapper for Jetpack Compose.
 
 ## Why use Tenugui?
 
@@ -30,7 +30,6 @@ Tenugui is ModalBottomSheet Wrapper for Jetpack Compose.
 
 ```kotlin
 var visible by remember { mutableStateOf(false) }
-
 if (visible) {
     val bottomSheetDialogState = rememberBottomSheetDialogState()
     BottomSheetDialog(
@@ -49,12 +48,12 @@ That's it! You can use BottomSheetDialog with Tenugui.
 ## Note
 
 > [!IMPORTANT]
-> PopupPositionProvider has issues about position.
-> TextFieldのcursor handleがズレて表示される問題を気にする場合はEditTextをAndroidViewで使用することをお勧めします。
+> PopupPositionProvider has issues about position. 
+> It is recommended to use EditText with AndroidView if you care about the cursor handle position.
 >
-> https://issuetracker.google.com/issues/265073970
-> https://issuetracker.google.com/issues/326394521
-> https://issuetracker.google.com/issues/391899135
+> - https://issuetracker.google.com/issues/265073970
+> - https://issuetracker.google.com/issues/326394521
+> - https://issuetracker.google.com/issues/391899135
 
 ## Installation
 
