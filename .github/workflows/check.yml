@@ -96,7 +96,7 @@ jobs:
         with:
           name: ${{ github.run_id }}-${{ github.run_number }}-${{ github.run_attempt }}
           path: tests/build/outputs/androidTest-results/connected/debug/*.png
-      - uses: dorny/test-reporter@v1
+      - uses: dorny/test-reporter@v2
         if: ${{ !cancelled() }}
         with:
           name: android-test-result
