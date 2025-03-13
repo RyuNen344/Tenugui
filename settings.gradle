@@ -34,3 +34,6 @@ develocity {
 rootProject.name = "Tenugui"
 include(":tenugui")
 include(":tests")
+include(":sources-1-1-x")
+include(":sources-1-2-x")
+include(":sources-1-3-x")

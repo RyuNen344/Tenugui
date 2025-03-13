@@ -1,0 +1,14 @@
+plugins {
+    alias libs.plugins.android.library
+    alias libs.plugins.jetbrains.kotlin.android
+    alias libs.plugins.jetbrains.compose
+}
+
+apply from: rootProject.layout.projectDirectory.file("gradle/android.gradle")
+apply from: rootProject.layout.projectDirectory.file("gradle/compose.gradle")
+
+android.namespace = "io.github.ryunen344.tenugui.sources_1_1_x"
+
+dependencies {
+    implementation 'androidx.compose.material3:material3:1.1.2'
+}
