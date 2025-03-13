@@ -4,25 +4,31 @@ Tenugui is a ModalBottomSheet wrapper for Jetpack Compose.
 
 ## Why use Tenugui?
 
-- compose-material, compose-material3 have different implementations about `BottomSheetDialog`
-    - compose-material: Generic Compose implementation, need to consider Scrim, need to wrap with `ModalBottomSheetLayout`
-    - compose-material3:1.1.X, 1.2.X -> Generic Compose implementation, draw on window
-    - compose-material3:1.3.X -> ComposeView implementation, draw on ComponentDialog
-- `compose-material` does not draw on the window, `compose-material3` has unstable APIs.
-- You can use `BottomSheetDialog` with `Tenugui` without depending on `compose-material` or `compose-material3`.
+Handling `BottomSheetDialog` in Jetpack Compose can be tricky because:
 
-- If you use compose material, but you want to use BottomSheetBehavior API, you can use `Tenugui`.
-- If you use compose material3:**1.1.X**, **1.2.X**, you can use `Tenugui`.
-- If you use compose material3:**1.3.X**, not need to use `Tenugui`. 👍
+- `compose-material` and `compose-material3` have different implementations:
+  - `compose-material`: A generic Compose implementation that requires handling scrims and wrapping with ModalBottomSheetLayout.
+  - `compose-material3`:
+    - 1.1.X, 1.2.X: Generic Compose implementation, drawn on the window. 
+    - 1.3.X and later: Uses `ComposeView`, drawn on `ComponentDialog`.
+- `compose-material` does not draw on the window, while `compose-material3` has unstable APIs
+- `Tenugui` allows you to use `BottomSheetDialog` without depending on `compose-material` or `compose-material3`.
+
+
+## When should you use Tenugui?
+
+- If you're using `compose-material` but want to leverage the BottomSheetBehavior API.
+- If you're using `compose-material3` 1.1.X or 1.2.X.
+- If you're using `compose-material3` 1.3.X or later, you do not need Tenugui. 👍
 
 > [!NOTE]
-> If compose-material starts to provide Popup BottomSheetDialog API, Tenugui finishes its role.
+> If `compose-material` provides a built-in `BottomSheetDialog` API in the future, `Tenugui` will no longer be necessary.
 
 ## Features
 
-- `Tenugui` uses [BottomSheetDialog](https://developer.android.com/reference/com/google/android/material/bottomsheet/BottomSheetDialog) to show a modal bottom sheet.
-- You can use BottomSheetBehavior API on Compose API.
-- You can handle each cancel request, such as back key, outside touch.
+- Uses [BottomSheetDialog](https://developer.android.com/reference/com/google/android/material/bottomsheet/BottomSheetDialog) to show a modal bottom sheet.
+- Supports [BottomSheetBehavior](https://developer.android.com/reference/com/google/android/material/bottomsheet/BottomSheetBehavior) API in Compose.
+- Handles various dismiss interactions, such as back key presses and outside touches.
 
 ## Usage
 
@@ -41,17 +47,17 @@ if (visible) {
 }
 ```
 
-That's it! You can use BottomSheetDialog with Tenugui.
+That's it! You can now use `BottomSheetDialog` with `Tenugui`.
 
-## Note
+## Known Issues
 
 > [!IMPORTANT]
-> PopupPositionProvider has issues about position. 
-> It is recommended to use EditText with AndroidView if you care about the cursor handle position.
+> PopupPositionProvider has positioning issues.
+> If cursor handle positioning is important, it's recommended to use `EditText` with `AndroidView`.
 >
-> - https://issuetracker.google.com/issues/265073970
-> - https://issuetracker.google.com/issues/326394521
-> - https://issuetracker.google.com/issues/391899135
+> - [Google Issue Tracker #265073970](https://issuetracker.google.com/issues/265073970)
+> - [Google Issue Tracker #326394521](https://issuetracker.google.com/issues/326394521)
+> - [Google Issue Tracker #391899135](https://issuetracker.google.com/issues/391899135)
 
 ## Installation
 
