@@ -21,6 +21,7 @@
 package io.github.ryunen344.tenugui
 
 import android.os.Bundle
+import android.os.Parcel
 import android.os.Parcelable
 import androidx.annotation.FloatRange
 import androidx.annotation.IntRange
@@ -36,11 +37,11 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.SecureFlagPolicy
+import androidx.core.os.ParcelCompat
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import io.github.ryunen344.tenugui.BottomSheetBehaviorProperties.Companion.DEFAULT_SIGNIFICANT_VEL_THRESHOLD
 import io.github.ryunen344.tenugui.BottomSheetBehaviorProperties.Companion.HIDE_FRICTION
 import io.github.ryunen344.tenugui.BottomSheetBehaviorProperties.Companion.NO_MAX_SIZE
-import kotlinx.parcelize.Parcelize
 
 @Stable
 public class BottomSheetDialogState(
@@ -127,12 +128,12 @@ public class BottomSheetDialogState(
             "snapshotBehavior = $snapshotBehavior, behavior = $behavior)"
     }
 
-    @Parcelize
     @Stable
     public class SavedState(
         public var dialogState: Bundle? = null,
         public var behaviorState: Parcelable? = null,
     ) : Parcelable {
+
         override fun equals(other: Any?): Boolean {
             if (this === other) return true
             if (javaClass != other?.javaClass) return false
@@ -149,6 +150,38 @@ public class BottomSheetDialogState(
             var result = dialogState?.hashCode() ?: 0
             result = 31 * result + (behaviorState?.hashCode() ?: 0)
             return result
+        }
+
+        override fun describeContents(): Int = 0
+
+        override fun writeToParcel(dest: Parcel, flags: Int) {
+            with(dest) {
+                writeBundle(dialogState)
+                writeParcelable(behaviorState, flags)
+            }
+        }
+
+        public companion object {
+            @JvmField
+            public val CREATOR: Parcelable.ClassLoaderCreator<SavedState> = object : Parcelable.ClassLoaderCreator<SavedState> {
+                override fun createFromParcel(source: Parcel?): SavedState? {
+                    return createFromParcel(source, null)
+                }
+
+                override fun createFromParcel(
+                    source: Parcel?,
+                    loader: ClassLoader?,
+                ): SavedState? {
+                    return source?.let {
+                        SavedState(
+                            dialogState = it.readBundle(loader),
+                            behaviorState = ParcelCompat.readParcelable(it, loader, Parcelable::class.java),
+                        )
+                    }
+                }
+
+                override fun newArray(size: Int): Array<out SavedState?>? = arrayOfNulls(size)
+            }
         }
     }
 }
