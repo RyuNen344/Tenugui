@@ -1,6 +1,6 @@
 public final class io/github/ryunen344/tenugui/BottomSheetBehaviorProperties : android/os/Parcelable {
 	public static final field $stable I
-	public static final field CREATOR Landroid/os/Parcelable$Creator;
+	public static final field CREATOR Landroid/os/Parcelable$ClassLoaderCreator;
 	public static final field Companion Lio/github/ryunen344/tenugui/BottomSheetBehaviorProperties$Companion;
 	public static final field DEFAULT_SIGNIFICANT_VEL_THRESHOLD I
 	public static final field HIDE_FRICTION F
@@ -22,7 +22,7 @@ public final class io/github/ryunen344/tenugui/BottomSheetBehaviorProperties : a
 	public final fun component9 ()Z
 	public final fun copy (ZIIIFIZZZIIF)Lio/github/ryunen344/tenugui/BottomSheetBehaviorProperties;
 	public static synthetic fun copy$default (Lio/github/ryunen344/tenugui/BottomSheetBehaviorProperties;ZIIIFIZZZIIFILjava/lang/Object;)Lio/github/ryunen344/tenugui/BottomSheetBehaviorProperties;
-	public final fun describeContents ()I
+	public fun describeContents ()I
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getDraggable ()Z
 	public final fun getExpandedOffset ()I
@@ -38,18 +38,10 @@ public final class io/github/ryunen344/tenugui/BottomSheetBehaviorProperties : a
 	public final fun getSkipCollapsed ()Z
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
-	public final fun writeToParcel (Landroid/os/Parcel;I)V
+	public fun writeToParcel (Landroid/os/Parcel;I)V
 }
 
 public final class io/github/ryunen344/tenugui/BottomSheetBehaviorProperties$Companion {
-}
-
-public final class io/github/ryunen344/tenugui/BottomSheetBehaviorProperties$Creator : android/os/Parcelable$Creator {
-	public fun <init> ()V
-	public final fun createFromParcel (Landroid/os/Parcel;)Lio/github/ryunen344/tenugui/BottomSheetBehaviorProperties;
-	public synthetic fun createFromParcel (Landroid/os/Parcel;)Ljava/lang/Object;
-	public final fun newArray (I)[Lio/github/ryunen344/tenugui/BottomSheetBehaviorProperties;
-	public synthetic fun newArray (I)[Ljava/lang/Object;
 }
 
 public final class io/github/ryunen344/tenugui/BottomSheetBehaviorPropertiesKt {
@@ -92,7 +84,8 @@ public final class io/github/ryunen344/tenugui/BottomSheetDialogKt {
 
 public final class io/github/ryunen344/tenugui/BottomSheetDialogProperties : android/os/Parcelable {
 	public static final field $stable I
-	public static final field CREATOR Landroid/os/Parcelable$Creator;
+	public static final field CREATOR Landroid/os/Parcelable$ClassLoaderCreator;
+	public static final field Companion Lio/github/ryunen344/tenugui/BottomSheetDialogProperties$Companion;
 	public synthetic fun <init> (ZZZZLandroidx/compose/ui/window/SecureFlagPolicy;ZFILkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public synthetic fun <init> (ZZZZLandroidx/compose/ui/window/SecureFlagPolicy;ZFLkotlin/jvm/internal/DefaultConstructorMarker;)V
 	public final fun component1 ()Z
@@ -104,7 +97,7 @@ public final class io/github/ryunen344/tenugui/BottomSheetDialogProperties : and
 	public final fun component7-D9Ej5fM ()F
 	public final fun copy-6ZxE2Lo (ZZZZLandroidx/compose/ui/window/SecureFlagPolicy;ZF)Lio/github/ryunen344/tenugui/BottomSheetDialogProperties;
 	public static synthetic fun copy-6ZxE2Lo$default (Lio/github/ryunen344/tenugui/BottomSheetDialogProperties;ZZZZLandroidx/compose/ui/window/SecureFlagPolicy;ZFILjava/lang/Object;)Lio/github/ryunen344/tenugui/BottomSheetDialogProperties;
-	public final fun describeContents ()I
+	public fun describeContents ()I
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getCancelable ()Z
 	public final fun getCanceledOnTouchOutside ()Z
@@ -115,15 +108,10 @@ public final class io/github/ryunen344/tenugui/BottomSheetDialogProperties : and
 	public final fun getSecurePolicy ()Landroidx/compose/ui/window/SecureFlagPolicy;
 	public fun hashCode ()I
 	public fun toString ()Ljava/lang/String;
-	public final fun writeToParcel (Landroid/os/Parcel;I)V
+	public fun writeToParcel (Landroid/os/Parcel;I)V
 }
 
-public final class io/github/ryunen344/tenugui/BottomSheetDialogProperties$Creator : android/os/Parcelable$Creator {
-	public fun <init> ()V
-	public final fun createFromParcel (Landroid/os/Parcel;)Lio/github/ryunen344/tenugui/BottomSheetDialogProperties;
-	public synthetic fun createFromParcel (Landroid/os/Parcel;)Ljava/lang/Object;
-	public final fun newArray (I)[Lio/github/ryunen344/tenugui/BottomSheetDialogProperties;
-	public synthetic fun newArray (I)[Ljava/lang/Object;
+public final class io/github/ryunen344/tenugui/BottomSheetDialogProperties$Companion {
 }
 
 public final class io/github/ryunen344/tenugui/BottomSheetDialogPropertiesKt {
@@ -149,26 +137,22 @@ public final class io/github/ryunen344/tenugui/BottomSheetDialogState {
 
 public final class io/github/ryunen344/tenugui/BottomSheetDialogState$SavedState : android/os/Parcelable {
 	public static final field $stable I
-	public static final field CREATOR Landroid/os/Parcelable$Creator;
+	public static final field CREATOR Landroid/os/Parcelable$ClassLoaderCreator;
+	public static final field Companion Lio/github/ryunen344/tenugui/BottomSheetDialogState$SavedState$Companion;
 	public fun <init> ()V
 	public fun <init> (Landroid/os/Bundle;Landroid/os/Parcelable;)V
 	public synthetic fun <init> (Landroid/os/Bundle;Landroid/os/Parcelable;ILkotlin/jvm/internal/DefaultConstructorMarker;)V
-	public final fun describeContents ()I
+	public fun describeContents ()I
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getBehaviorState ()Landroid/os/Parcelable;
 	public final fun getDialogState ()Landroid/os/Bundle;
 	public fun hashCode ()I
 	public final fun setBehaviorState (Landroid/os/Parcelable;)V
 	public final fun setDialogState (Landroid/os/Bundle;)V
-	public final fun writeToParcel (Landroid/os/Parcel;I)V
+	public fun writeToParcel (Landroid/os/Parcel;I)V
 }
 
-public final class io/github/ryunen344/tenugui/BottomSheetDialogState$SavedState$Creator : android/os/Parcelable$Creator {
-	public fun <init> ()V
-	public final fun createFromParcel (Landroid/os/Parcel;)Lio/github/ryunen344/tenugui/BottomSheetDialogState$SavedState;
-	public synthetic fun createFromParcel (Landroid/os/Parcel;)Ljava/lang/Object;
-	public final fun newArray (I)[Lio/github/ryunen344/tenugui/BottomSheetDialogState$SavedState;
-	public synthetic fun newArray (I)[Ljava/lang/Object;
+public final class io/github/ryunen344/tenugui/BottomSheetDialogState$SavedState$Companion {
 }
 
 public final class io/github/ryunen344/tenugui/BottomSheetDialogStateKt {
