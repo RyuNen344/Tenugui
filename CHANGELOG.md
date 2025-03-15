@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.0.1](https://github.com/RyuNen344/Tenugui/compare/1.0.0...1.0.1) (2025-03-15)
+
+
+### Features
+
+* implement Parcelable without parcelize plugin ([#28](https://github.com/RyuNen344/Tenugui/issues/28)) ([6576b0c](https://github.com/RyuNen344/Tenugui/commit/6576b0c5b58e386c005276e0cfb23ce4bed043de))
+
+
+### Dependency Updates
+
+* **gradle:** bump kotlin from 2.0.0 to 2.1.10 ([#10](https://github.com/RyuNen344/Tenugui/issues/10)) ([fc805b0](https://github.com/RyuNen344/Tenugui/commit/fc805b0ce9d73d1990e63e61e61f04d0f5d1b82a))
+
+
+### Chores
+
+* prepare release 1.0.1 ([#30](https://github.com/RyuNen344/Tenugui/issues/30)) ([a2cf2e3](https://github.com/RyuNen344/Tenugui/commit/a2cf2e30b73e92bb3c762f7a9fc6a9e40e958bc4))
+
 ## 1.0.0 (2025-03-13)
 
 
