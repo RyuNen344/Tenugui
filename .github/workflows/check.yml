@@ -103,3 +103,21 @@ jobs:
           path: '**/outputs/androidTest-results/connected/**/*.xml'
           reporter: java-junit
           fail-on-error: false
+
+  unitTest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/java
+      - uses: ./.github/actions/gradle
+      - name: run unit test
+        shell: bash
+        run: |
+          ./gradlew testDebugUnitTest
+      - uses: dorny/test-reporter@v2
+        if: ${{ !cancelled() }}
+        with:
+          name: unit-test-result
+          path: '**/test-results/**/*.xml'
+          reporter: java-junit
+          fail-on-error: false
