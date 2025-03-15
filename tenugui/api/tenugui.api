@@ -179,7 +179,6 @@ public final class io/github/ryunen344/tenugui/BottomSheetDialogWrapper : com/go
 
 public final class io/github/ryunen344/tenugui/ComposableSingletons$BottomSheetDialogLayoutKt {
 	public static final field INSTANCE Lio/github/ryunen344/tenugui/ComposableSingletons$BottomSheetDialogLayoutKt;
-	public static field lambda-1 Lkotlin/jvm/functions/Function2;
 	public fun <init> ()V
 	public final fun getLambda-1$tenugui_release ()Lkotlin/jvm/functions/Function2;
 }
