@@ -1,7 +1,6 @@
 plugins {
     alias libs.plugins.android.library
     alias libs.plugins.jetbrains.kotlin.android
-    alias libs.plugins.jetbrains.kotlin.plugin.parcelize
     alias libs.plugins.jetbrains.kotlinx.compatibility
     alias libs.plugins.jetbrains.compose
 }

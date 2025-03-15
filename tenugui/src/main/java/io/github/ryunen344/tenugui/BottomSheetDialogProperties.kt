@@ -20,6 +20,7 @@
 
 package io.github.ryunen344.tenugui
 
+import android.os.Parcel
 import android.os.Parcelable
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Immutable
@@ -27,11 +28,9 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.SecureFlagPolicy
-import kotlinx.parcelize.Parcelize
-import kotlinx.parcelize.TypeParceler
+import androidx.core.os.ParcelCompat
 
 @Immutable
-@Parcelize
 public data class BottomSheetDialogProperties(
     val dismissOnBackPress: Boolean = true,
 
@@ -63,9 +62,51 @@ public data class BottomSheetDialogProperties(
     /**
      * [com.google.android.material.R.dimen.design_bottom_sheet_elevation]
      */
-    @TypeParceler<Dp, DpParceler>
     val elevation: Dp = 8.dp,
-) : Parcelable
+) : Parcelable {
+
+    override fun describeContents(): Int = 0
+
+    override fun writeToParcel(dest: Parcel, flags: Int) {
+        with(dest) {
+            ParcelCompat.writeBoolean(this, dismissOnBackPress)
+            ParcelCompat.writeBoolean(this, cancelable)
+            ParcelCompat.writeBoolean(this, canceledOnTouchOutside)
+            ParcelCompat.writeBoolean(this, dismissWithAnimation)
+            writeInt(securePolicy.ordinal)
+            ParcelCompat.writeBoolean(this, decorFitsSystemWindows)
+            writeFloat(elevation.value)
+        }
+    }
+
+    public companion object {
+        @JvmField
+        public val CREATOR: Parcelable.ClassLoaderCreator<BottomSheetDialogProperties> = object : Parcelable.ClassLoaderCreator<BottomSheetDialogProperties> {
+            override fun createFromParcel(source: Parcel?): BottomSheetDialogProperties? {
+                return createFromParcel(source, null)
+            }
+
+            override fun createFromParcel(
+                source: Parcel?,
+                loader: ClassLoader?,
+            ): BottomSheetDialogProperties? {
+                return source?.let {
+                    BottomSheetDialogProperties(
+                        dismissOnBackPress = ParcelCompat.readBoolean(it),
+                        cancelable = ParcelCompat.readBoolean(it),
+                        canceledOnTouchOutside = ParcelCompat.readBoolean(it),
+                        dismissWithAnimation = ParcelCompat.readBoolean(it),
+                        securePolicy = SecureFlagPolicy.entries[it.readInt()],
+                        decorFitsSystemWindows = ParcelCompat.readBoolean(it),
+                        elevation = Dp(it.readFloat()),
+                    )
+                }
+            }
+
+            override fun newArray(size: Int): Array<out BottomSheetDialogProperties?>? = arrayOfNulls(size)
+        }
+    }
+}
 
 @Composable
 public fun rememberBottomSheetDialogProperties(

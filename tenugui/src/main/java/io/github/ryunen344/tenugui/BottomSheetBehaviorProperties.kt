@@ -20,6 +20,7 @@
 
 package io.github.ryunen344.tenugui
 
+import android.os.Parcel
 import android.os.Parcelable
 import androidx.annotation.FloatRange
 import androidx.annotation.IntRange
@@ -27,14 +28,13 @@ import androidx.annotation.Px
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.remember
+import androidx.core.os.ParcelCompat
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import io.github.ryunen344.tenugui.BottomSheetBehaviorProperties.Companion.DEFAULT_SIGNIFICANT_VEL_THRESHOLD
 import io.github.ryunen344.tenugui.BottomSheetBehaviorProperties.Companion.HIDE_FRICTION
 import io.github.ryunen344.tenugui.BottomSheetBehaviorProperties.Companion.NO_MAX_SIZE
-import kotlinx.parcelize.Parcelize
 
 @Immutable
-@Parcelize
 public data class BottomSheetBehaviorProperties(
     /**
      * [BottomSheetBehavior.fitToContents]
@@ -120,6 +120,25 @@ public data class BottomSheetBehaviorProperties(
      */
     val hideFriction: Float = HIDE_FRICTION,
 ) : Parcelable {
+    override fun describeContents(): Int = 0
+
+    override fun writeToParcel(dest: Parcel, flags: Int) {
+        with(dest) {
+            ParcelCompat.writeBoolean(this, fitToContents)
+            writeInt(maxWidth)
+            writeInt(maxHeight)
+            writeInt(peekHeight)
+            writeFloat(halfExpandedRatio)
+            writeInt(expandedOffset)
+            ParcelCompat.writeBoolean(this, hideable)
+            ParcelCompat.writeBoolean(this, skipCollapsed)
+            ParcelCompat.writeBoolean(this, draggable)
+            writeInt(significantVelocityThreshold)
+            writeInt(saveFlags)
+            writeFloat(hideFriction)
+        }
+    }
+
     public companion object {
         /**
          * [BottomSheetBehavior.NO_MAX_SIZE]
@@ -135,6 +154,38 @@ public data class BottomSheetBehaviorProperties(
          * [BottomSheetBehavior.HIDE_FRICTION]
          */
         public const val HIDE_FRICTION: Float = 0.1f
+
+        @JvmField
+        public val CREATOR: Parcelable.ClassLoaderCreator<BottomSheetBehaviorProperties> =
+            object : Parcelable.ClassLoaderCreator<BottomSheetBehaviorProperties> {
+                override fun createFromParcel(source: Parcel?): BottomSheetBehaviorProperties? {
+                    return createFromParcel(source, null)
+                }
+
+                override fun createFromParcel(
+                    source: Parcel?,
+                    loader: ClassLoader?,
+                ): BottomSheetBehaviorProperties? {
+                    return source?.let {
+                        BottomSheetBehaviorProperties(
+                            fitToContents = ParcelCompat.readBoolean(it),
+                            maxWidth = it.readInt(),
+                            maxHeight = it.readInt(),
+                            peekHeight = it.readInt(),
+                            halfExpandedRatio = it.readFloat(),
+                            expandedOffset = it.readInt(),
+                            hideable = ParcelCompat.readBoolean(it),
+                            skipCollapsed = ParcelCompat.readBoolean(it),
+                            draggable = ParcelCompat.readBoolean(it),
+                            significantVelocityThreshold = it.readInt(),
+                            saveFlags = it.readInt(),
+                            hideFriction = it.readFloat(),
+                        )
+                    }
+                }
+
+                override fun newArray(size: Int): Array<BottomSheetBehaviorProperties?> = arrayOfNulls(size)
+            }
     }
 }
 
