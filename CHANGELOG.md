@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/RyuNen344/Tenugui/compare/1.0.1...1.0.2) (2025-03-21)
+
+
+### Dependency Updates
+
+* **gradle:** bump kotlin from 2.1.10 to 2.1.20 ([#32](https://github.com/RyuNen344/Tenugui/issues/32)) ([f48c95a](https://github.com/RyuNen344/Tenugui/commit/f48c95a9d2c86f3d64722664b0a1f3214ec341bc))
+
 ## [1.0.1](https://github.com/RyuNen344/Tenugui/compare/1.0.0...1.0.1) (2025-03-15)
 
 
