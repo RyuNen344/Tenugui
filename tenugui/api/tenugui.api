@@ -180,7 +180,7 @@ public final class io/github/ryunen344/tenugui/BottomSheetDialogWrapper : com/go
 public final class io/github/ryunen344/tenugui/ComposableSingletons$BottomSheetDialogLayoutKt {
 	public static final field INSTANCE Lio/github/ryunen344/tenugui/ComposableSingletons$BottomSheetDialogLayoutKt;
 	public fun <init> ()V
-	public final fun getLambda-1$tenugui_release ()Lkotlin/jvm/functions/Function2;
+	public final fun getLambda$-1038954275$tenugui_release ()Lkotlin/jvm/functions/Function2;
 }
 
 public final class io/github/ryunen344/tenugui/ListenableBottomSheetBehavior : com/google/android/material/bottomsheet/BottomSheetBehavior {
