@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.3](https://github.com/RyuNen344/Tenugui/compare/1.0.2...1.0.3) (2025-03-31)
+
+
+### Dependency Updates
+
+* **gradle:** bump agp from 8.9.0 to 8.9.1 ([#34](https://github.com/RyuNen344/Tenugui/issues/34)) ([8444319](https://github.com/RyuNen344/Tenugui/commit/8444319541b8a8d4a36af0fb9f0741864a28f296))
+* **gradle:** bump nl.littlerobots.version-catalog-update from 0.8.5 to 1.0.0 ([#36](https://github.com/RyuNen344/Tenugui/issues/36)) ([c3b7c66](https://github.com/RyuNen344/Tenugui/commit/c3b7c6678fd2ce7f5b28b4c23cbae4e6e0779d92))
+
 ## [1.0.2](https://github.com/RyuNen344/Tenugui/compare/1.0.1...1.0.2) (2025-03-21)
 
 
