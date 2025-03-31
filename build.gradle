@@ -40,7 +40,5 @@ versionCatalogUpdate {
     sortByKey = true
     keep {
         keepUnusedVersions = true
-        keepUnusedLibraries = true
-        keepUnusedPlugins = true
     }
 }
