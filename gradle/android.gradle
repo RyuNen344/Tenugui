@@ -22,7 +22,7 @@ android {
     lint {
         checkReleaseBuilds = false
         sarifReport = true
-        baseline = rootProject.layout.projectDirectory.file(".lint/android-baseline.xml")
+        baseline = layout.settingsDirectory.file(".lint/android-baseline.xml")
         abortOnError = !project.providers.gradleProperty("abortOnError").present
     }
 }
