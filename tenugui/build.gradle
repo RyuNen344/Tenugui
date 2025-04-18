@@ -5,9 +5,9 @@ plugins {
     alias libs.plugins.jetbrains.compose
 }
 
-apply from: rootProject.layout.projectDirectory.file("gradle/android.gradle")
-apply from: rootProject.layout.projectDirectory.file("gradle/compose.gradle")
-apply from: rootProject.layout.projectDirectory.file("gradle/publish.gradle")
+apply from: layout.settingsDirectory.file("gradle/android.gradle")
+apply from: layout.settingsDirectory.file("gradle/compose.gradle")
+apply from: layout.settingsDirectory.file("gradle/publish.gradle")
 
 android.namespace = "io.github.ryunen344.tenugui"
 

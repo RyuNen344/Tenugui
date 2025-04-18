@@ -6,10 +6,10 @@ plugins {
     alias libs.plugins.dropshots
 }
 
-apply from: rootProject.layout.projectDirectory.file("gradle/android.gradle")
-apply from: rootProject.layout.projectDirectory.file("gradle/compose.gradle")
-apply from: rootProject.layout.projectDirectory.file("gradle/test.gradle")
-apply from: rootProject.layout.projectDirectory.file("gradle/test-compose.gradle")
+apply from: layout.settingsDirectory.file("gradle/android.gradle")
+apply from: layout.settingsDirectory.file("gradle/compose.gradle")
+apply from: layout.settingsDirectory.file("gradle/test.gradle")
+apply from: layout.settingsDirectory.file("gradle/test-compose.gradle")
 
 android.namespace = "io.github.ryunen344.tenugui.tests"
 
