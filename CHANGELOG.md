@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.0.3](https://github.com/RyuNen344/Tenugui/compare/1.0.2...1.0.3) (2025-04-24)
+
+
+### Dependency Updates
+
+* **gradle:** bump agp from 8.9.0 to 8.9.1 ([#34](https://github.com/RyuNen344/Tenugui/issues/34)) ([8444319](https://github.com/RyuNen344/Tenugui/commit/8444319541b8a8d4a36af0fb9f0741864a28f296))
+* **gradle:** bump agp from 8.9.1 to 8.9.2 ([#41](https://github.com/RyuNen344/Tenugui/issues/41)) ([243f882](https://github.com/RyuNen344/Tenugui/commit/243f88215b6cca69e93d8bc138d628e5ed7488a3))
+* **gradle:** bump androidx.compose.material3:material3 from 1.3.1 to 1.3.2 in the compose group ([#37](https://github.com/RyuNen344/Tenugui/issues/37)) ([2ba068f](https://github.com/RyuNen344/Tenugui/commit/2ba068f4b69932157c8c4504321e755b1033d9f7))
+* **gradle:** bump com.dropbox.dropshots from 0.4.3-SHAPSHOT to 0.5.0 ([#38](https://github.com/RyuNen344/Tenugui/issues/38)) ([e770076](https://github.com/RyuNen344/Tenugui/commit/e770076c89bbb87b845cee0b853f0ce428dbdf86))
+* **gradle:** bump com.gradle.develocity from 3.19.2 to 4.0 ([#39](https://github.com/RyuNen344/Tenugui/issues/39)) ([589196e](https://github.com/RyuNen344/Tenugui/commit/589196e9352a4f79c1be838f9c9c5620ee9e8dd7))
+* **gradle:** bump nl.littlerobots.version-catalog-update from 0.8.5 to 1.0.0 ([#36](https://github.com/RyuNen344/Tenugui/issues/36)) ([c3b7c66](https://github.com/RyuNen344/Tenugui/commit/c3b7c6678fd2ce7f5b28b4c23cbae4e6e0779d92))
+* **gradle:** bump the compose group with 7 updates ([#42](https://github.com/RyuNen344/Tenugui/issues/42)) ([d2fb04e](https://github.com/RyuNen344/Tenugui/commit/d2fb04e88b6600d15944c966c6850b54cc43bc46))
+
+
+### Chores
+
+* improve layout api ([#40](https://github.com/RyuNen344/Tenugui/issues/40)) ([954be1b](https://github.com/RyuNen344/Tenugui/commit/954be1bdd75a290d02c5f4be54b585865988812e))
+
 ## [1.0.2](https://github.com/RyuNen344/Tenugui/compare/1.0.1...1.0.2) (2025-03-21)
 
 
