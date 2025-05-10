@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.0.4](https://github.com/RyuNen344/Tenugui/compare/1.0.3...1.0.4) (2025-05-08)
+
+
+### Dependency Updates
+
+* **gradle:** bump agp from 8.9.2 to 8.10.0 ([#45](https://github.com/RyuNen344/Tenugui/issues/45)) ([3f78397](https://github.com/RyuNen344/Tenugui/commit/3f7839789212fea7c57f3fd8d5f11d5a9247f871))
+* **gradle:** bump com.gradle.develocity from 4.0 to 4.0.1 ([#43](https://github.com/RyuNen344/Tenugui/issues/43)) ([f273b16](https://github.com/RyuNen344/Tenugui/commit/f273b1659e20bbb48c1ade78d0527309fccf1e25))
+* **gradle:** bump the compose group with 7 updates ([#46](https://github.com/RyuNen344/Tenugui/issues/46)) ([753f84a](https://github.com/RyuNen344/Tenugui/commit/753f84ad8ddacabaf312a80bc5ee0b245f262d01))
+
 ## [1.0.3](https://github.com/RyuNen344/Tenugui/compare/1.0.2...1.0.3) (2025-04-24)
 
 
