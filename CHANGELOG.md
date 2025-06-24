@@ -1,5 +1,32 @@
 # Changelog
 
+## [1.0.4](https://github.com/RyuNen344/Tenugui/compare/1.0.3...1.0.4) (2025-06-24)
+
+
+### Dependency Updates
+
+* **gradle:** bump agp from 8.10.0 to 8.10.1 ([#51](https://github.com/RyuNen344/Tenugui/issues/51)) ([6556cc0](https://github.com/RyuNen344/Tenugui/commit/6556cc0f3828fbfc96c51508bfd62a3f969e0be1))
+* **gradle:** bump agp from 8.9.2 to 8.10.0 ([#45](https://github.com/RyuNen344/Tenugui/issues/45)) ([3f78397](https://github.com/RyuNen344/Tenugui/commit/3f7839789212fea7c57f3fd8d5f11d5a9247f871))
+* **gradle:** bump androidx.appcompat:appcompat from 1.7.0 to 1.7.1 ([#52](https://github.com/RyuNen344/Tenugui/issues/52)) ([3503fa3](https://github.com/RyuNen344/Tenugui/commit/3503fa3124a7353316cc0c4cfcccb9023d17e62b))
+* **gradle:** bump app.cash.turbine:turbine from 1.2.0 to 1.2.1 ([#53](https://github.com/RyuNen344/Tenugui/issues/53)) ([9cfed62](https://github.com/RyuNen344/Tenugui/commit/9cfed62cffef88a5000fefb5990fcb6f06384741))
+* **gradle:** bump com.gradle.develocity from 4.0 to 4.0.1 ([#43](https://github.com/RyuNen344/Tenugui/issues/43)) ([f273b16](https://github.com/RyuNen344/Tenugui/commit/f273b1659e20bbb48c1ade78d0527309fccf1e25))
+* **gradle:** bump com.gradle.develocity from 4.0.1 to 4.0.2 ([#50](https://github.com/RyuNen344/Tenugui/issues/50)) ([f1b39f1](https://github.com/RyuNen344/Tenugui/commit/f1b39f1dc3bbd5576f729b5e25a467b3094f062c))
+* **gradle:** bump com.vanniktech.maven.publish from 0.31.0 to 0.32.0 ([#47](https://github.com/RyuNen344/Tenugui/issues/47)) ([d236be7](https://github.com/RyuNen344/Tenugui/commit/d236be7c1bfa22bd6b66b148fa82095e6d1ac283))
+* **gradle:** bump com.vanniktech.maven.publish from 0.32.0 to 0.33.0 ([#58](https://github.com/RyuNen344/Tenugui/issues/58)) ([86f96a3](https://github.com/RyuNen344/Tenugui/commit/86f96a316a3925441a13d1aa9a28392754e49e95))
+* **gradle:** bump kotlin from 2.1.20 to 2.1.21 ([#48](https://github.com/RyuNen344/Tenugui/issues/48)) ([1deb627](https://github.com/RyuNen344/Tenugui/commit/1deb627df521b44e22a91ecaac9e5ba33376189a))
+* **gradle:** bump kotlin from 2.1.21 to 2.2.0 ([#60](https://github.com/RyuNen344/Tenugui/issues/60)) ([6d6f522](https://github.com/RyuNen344/Tenugui/commit/6d6f5220d6a1d2a8cc3a8484810fc2574e3e625b))
+* **gradle:** bump org.robolectric:robolectric from 4.14.1 to 4.15 ([#57](https://github.com/RyuNen344/Tenugui/issues/57)) ([8b5e1ec](https://github.com/RyuNen344/Tenugui/commit/8b5e1ec1a95696d8b55cec02d7d0b35582a36775))
+* **gradle:** bump org.robolectric:robolectric from 4.15 to 4.15.1 ([#59](https://github.com/RyuNen344/Tenugui/issues/59)) ([5e3e042](https://github.com/RyuNen344/Tenugui/commit/5e3e042325499ffc600877b82f6cf037be5c54ac))
+* **gradle:** bump the compose group with 7 updates ([#46](https://github.com/RyuNen344/Tenugui/issues/46)) ([753f84a](https://github.com/RyuNen344/Tenugui/commit/753f84ad8ddacabaf312a80bc5ee0b245f262d01))
+* **gradle:** bump the compose group with 7 updates ([#49](https://github.com/RyuNen344/Tenugui/issues/49)) ([5830c3b](https://github.com/RyuNen344/Tenugui/commit/5830c3bab79a811b49e7f501d3d8641e26c9dcab))
+* **gradle:** bump the compose group with 7 updates ([#56](https://github.com/RyuNen344/Tenugui/issues/56)) ([3428778](https://github.com/RyuNen344/Tenugui/commit/3428778500c50376fc31a9ccd1f178edf071096f))
+
+
+### Chores
+
+* do not cancel workflow on main branch ([#54](https://github.com/RyuNen344/Tenugui/issues/54)) ([02666f8](https://github.com/RyuNen344/Tenugui/commit/02666f8ad49c193c5c315360423581029ef6698d))
+* update idea project file ([#55](https://github.com/RyuNen344/Tenugui/issues/55)) ([56ee873](https://github.com/RyuNen344/Tenugui/commit/56ee8730d3cf574b1f90bcb0851c1b02855a6ce5))
+
 ## [1.0.3](https://github.com/RyuNen344/Tenugui/compare/1.0.2...1.0.3) (2025-04-24)
 
 
