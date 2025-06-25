@@ -63,5 +63,5 @@ io-gitlab-arturbosch-detekt = { id = "io.gitlab.arturbosch.detekt", version.ref 
 jetbrains-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 jetbrains-kotlin-plugin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize" }
-jetbrains-kotlinx-compatibility = "org.jetbrains.kotlinx.binary-compatibility-validator:0.17.0"
+jetbrains-kotlinx-compatibility = "org.jetbrains.kotlinx.binary-compatibility-validator:0.18.0"
 nl-littlerobots-version-catalog-update = { id = "nl.littlerobots.version-catalog-update", version.ref = "version-catalog-update" }
