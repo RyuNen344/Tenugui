@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.0.5](https://github.com/RyuNen344/Tenugui/compare/1.0.4...1.0.5) (2025-07-11)
+
+
+### Dependency Updates
+
+* **gradle:** bump agp from 8.10.1 to 8.11.0 ([#63](https://github.com/RyuNen344/Tenugui/issues/63)) ([038f373](https://github.com/RyuNen344/Tenugui/commit/038f3730d38797d1401263b90119bb4e67f1be12))
+* **gradle:** bump agp from 8.11.0 to 8.11.1 ([#66](https://github.com/RyuNen344/Tenugui/issues/66)) ([f764ad5](https://github.com/RyuNen344/Tenugui/commit/f764ad56d39fbccdb4ee79e1eed8f9dac7461973))
+* **gradle:** bump org.jetbrains.kotlinx.binary-compatibility-validator from 0.17.0 to 0.18.0 ([#62](https://github.com/RyuNen344/Tenugui/issues/62)) ([1095d12](https://github.com/RyuNen344/Tenugui/commit/1095d123b2afc35bc0ae6a1d3cf7f50e2431ad77))
+* **gradle:** bump org.jetbrains.kotlinx.binary-compatibility-validator from 0.18.0 to 0.18.1 ([#65](https://github.com/RyuNen344/Tenugui/issues/65)) ([cfb8914](https://github.com/RyuNen344/Tenugui/commit/cfb8914cf99277f368be8eea391c21abdce6451a))
+
 ## [1.0.4](https://github.com/RyuNen344/Tenugui/compare/1.0.3...1.0.4) (2025-06-24)
 
 
