@@ -1,5 +1,20 @@
 # Changelog
 
+## [1.0.5](https://github.com/RyuNen344/Tenugui/compare/1.0.4...1.0.5) (2025-08-01)
+
+
+### Dependency Updates
+
+* **gradle:** bump agp from 8.10.1 to 8.11.0 ([#63](https://github.com/RyuNen344/Tenugui/issues/63)) ([038f373](https://github.com/RyuNen344/Tenugui/commit/038f3730d38797d1401263b90119bb4e67f1be12))
+* **gradle:** bump agp from 8.11.0 to 8.11.1 ([#66](https://github.com/RyuNen344/Tenugui/issues/66)) ([f764ad5](https://github.com/RyuNen344/Tenugui/commit/f764ad56d39fbccdb4ee79e1eed8f9dac7461973))
+* **gradle:** bump agp from 8.11.1 to 8.12.0 ([#76](https://github.com/RyuNen344/Tenugui/issues/76)) ([08908e2](https://github.com/RyuNen344/Tenugui/commit/08908e2146840440d48e578fd208dc917f77b70b))
+* **gradle:** bump androidx.test:runner from 1.6.2 to 1.7.0 ([#75](https://github.com/RyuNen344/Tenugui/issues/75)) ([9ad91cd](https://github.com/RyuNen344/Tenugui/commit/9ad91cd9815b8dd9cd4d8b57f1ef95ca4cd39ae6))
+* **gradle:** bump androidx.test.espresso:espresso-device from 1.0.1 to 1.1.0 ([#74](https://github.com/RyuNen344/Tenugui/issues/74)) ([377eeaa](https://github.com/RyuNen344/Tenugui/commit/377eeaa3a509a73be8bca387bf9f0cb77d0226b0))
+* **gradle:** bump com.gradle.develocity from 4.0.2 to 4.1 ([#68](https://github.com/RyuNen344/Tenugui/issues/68)) ([9829511](https://github.com/RyuNen344/Tenugui/commit/9829511fbdd9f5ea385fce6418bf1242fdf59271))
+* **gradle:** bump com.vanniktech.maven.publish from 0.33.0 to 0.34.0 ([#67](https://github.com/RyuNen344/Tenugui/issues/67)) ([24a9f92](https://github.com/RyuNen344/Tenugui/commit/24a9f92e83c745c9bb9f6850882552aad8324ac6))
+* **gradle:** bump org.jetbrains.kotlinx.binary-compatibility-validator from 0.17.0 to 0.18.0 ([#62](https://github.com/RyuNen344/Tenugui/issues/62)) ([1095d12](https://github.com/RyuNen344/Tenugui/commit/1095d123b2afc35bc0ae6a1d3cf7f50e2431ad77))
+* **gradle:** bump org.jetbrains.kotlinx.binary-compatibility-validator from 0.18.0 to 0.18.1 ([#65](https://github.com/RyuNen344/Tenugui/issues/65)) ([cfb8914](https://github.com/RyuNen344/Tenugui/commit/cfb8914cf99277f368be8eea391c21abdce6451a))
+
 ## [1.0.4](https://github.com/RyuNen344/Tenugui/compare/1.0.3...1.0.4) (2025-06-24)
 
 
