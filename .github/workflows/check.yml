@@ -25,7 +25,7 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: ./.github/actions/java
       - uses: ./.github/actions/gradle
       - uses: reviewdog/action-setup@v1
@@ -61,7 +61,7 @@ jobs:
   api:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: ./.github/actions/java
       - uses: ./.github/actions/gradle
       - name: check api file
@@ -72,7 +72,7 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: ./.github/actions/java
       - uses: ./.github/actions/gradle
       - name: publish
@@ -83,7 +83,7 @@ jobs:
   androidTest:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: ./.github/actions/java
       - uses: ./.github/actions/gradle
       - name: run android test
@@ -107,7 +107,7 @@ jobs:
   unitTest:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: ./.github/actions/java
       - uses: ./.github/actions/gradle
       - name: run unit test
