@@ -27,8 +27,7 @@ dependencyResolutionManagement {
 develocity {
     buildScan {
         termsOfUseUrl = "https://gradle.com/help/legal-terms-of-use"
-        termsOfUseAgree = "yes"
-        publishing.onlyIf { providers.environmentVariable("CI").map { it == "true" }.getOrElse(false) }
+        termsOfUseAgree = providers.environmentVariable("CI").orElse("false").map { it == "true" ? 'yes' : 'no' }
     }
 }
 
