@@ -91,7 +91,7 @@ jobs:
         with:
           prepare-script: ./gradlew :tests:assembleDebug :tests:assembleDebugAndroidTest
           script: ./gradlew :tests:connectedDebugAndroidTest
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         if: ${{ failure() }}
         with:
           name: ${{ github.run_id }}-${{ github.run_number }}-${{ github.run_attempt }}
