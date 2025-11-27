@@ -1,5 +1,61 @@
 # Changelog
 
+## [1.1.0](https://github.com/RyuNen344/Tenugui/compare/1.0.4...1.1.0) (2025-11-27)
+
+
+### Features
+
+* Update compileSdk and targetSdk to version 36 ([#93](https://github.com/RyuNen344/Tenugui/issues/93)) ([58a3227](https://github.com/RyuNen344/Tenugui/commit/58a32276fbc2a76e4b2305d6a844a63bfb76c6a4))
+
+
+### Dependency Updates
+
+* **github-actions:** bump actions/checkout from 4 to 5 ([#77](https://github.com/RyuNen344/Tenugui/issues/77)) ([fdd0578](https://github.com/RyuNen344/Tenugui/commit/fdd057827417eaf9a18db82c9fd48f6035d6765d))
+* **github-actions:** bump actions/setup-java from 4 to 5 in /.github/actions/java ([#82](https://github.com/RyuNen344/Tenugui/issues/82)) ([522c241](https://github.com/RyuNen344/Tenugui/commit/522c241fd9fd5f5bb470aba6651855834bd3ae4d))
+* **github-actions:** bump actions/upload-artifact from 4 to 5 ([#103](https://github.com/RyuNen344/Tenugui/issues/103)) ([92d9e4b](https://github.com/RyuNen344/Tenugui/commit/92d9e4b53677f3c14e46fe2e2abf3e3b01c5951d))
+* **github-actions:** bump gradle/actions from 4 to 5 ([#96](https://github.com/RyuNen344/Tenugui/issues/96)) ([e4318f1](https://github.com/RyuNen344/Tenugui/commit/e4318f12d52add3d1e4d6adccb622cd8bf83d810))
+* **github-actions:** bump gradle/actions from 4 to 5 in /.github/actions/gradle ([#97](https://github.com/RyuNen344/Tenugui/issues/97)) ([0bffd6f](https://github.com/RyuNen344/Tenugui/commit/0bffd6f4775c48996ba64456adf29e2b808f8ed5))
+* **gradle:** bump agp from 8.10.1 to 8.11.0 ([#63](https://github.com/RyuNen344/Tenugui/issues/63)) ([038f373](https://github.com/RyuNen344/Tenugui/commit/038f3730d38797d1401263b90119bb4e67f1be12))
+* **gradle:** bump agp from 8.11.0 to 8.11.1 ([#66](https://github.com/RyuNen344/Tenugui/issues/66)) ([f764ad5](https://github.com/RyuNen344/Tenugui/commit/f764ad56d39fbccdb4ee79e1eed8f9dac7461973))
+* **gradle:** bump agp from 8.11.1 to 8.12.0 ([#76](https://github.com/RyuNen344/Tenugui/issues/76)) ([08908e2](https://github.com/RyuNen344/Tenugui/commit/08908e2146840440d48e578fd208dc917f77b70b))
+* **gradle:** bump agp from 8.12.0 to 8.12.1 ([#80](https://github.com/RyuNen344/Tenugui/issues/80)) ([2a0dce0](https://github.com/RyuNen344/Tenugui/commit/2a0dce0ca4d79d7e82be54001d3f876405d42313))
+* **gradle:** bump agp from 8.12.1 to 8.12.2 ([#84](https://github.com/RyuNen344/Tenugui/issues/84)) ([583fbc9](https://github.com/RyuNen344/Tenugui/commit/583fbc90bca655516f8c2b95e000518766584dd1))
+* **gradle:** bump agp from 8.12.2 to 8.13.0 ([#85](https://github.com/RyuNen344/Tenugui/issues/85)) ([47ad32d](https://github.com/RyuNen344/Tenugui/commit/47ad32dcdc2d51e04592b99c2d5ad3adf0f4caf6))
+* **gradle:** bump agp from 8.13.0 to 8.13.1 ([#105](https://github.com/RyuNen344/Tenugui/issues/105)) ([63381aa](https://github.com/RyuNen344/Tenugui/commit/63381aad5c0f9a1f1277af10408f9d0cfbb21709))
+* **gradle:** bump androidx.activity:activity-compose from 1.10.1 to 1.11.0 ([#90](https://github.com/RyuNen344/Tenugui/issues/90)) ([fee861e](https://github.com/RyuNen344/Tenugui/commit/fee861ecef1671d405562fa8050df60d199b4e05))
+* **gradle:** bump androidx.test:core from 1.6.1 to 1.7.0 ([#69](https://github.com/RyuNen344/Tenugui/issues/69)) ([a29ddfe](https://github.com/RyuNen344/Tenugui/commit/a29ddfe8db222f35b2e2e0b6f86adc7b796cb8d2))
+* **gradle:** bump androidx.test:rules from 1.6.1 to 1.7.0 ([#72](https://github.com/RyuNen344/Tenugui/issues/72)) ([fbc72c9](https://github.com/RyuNen344/Tenugui/commit/fbc72c9a9813d9be187144eed622e6d6db9edfa9))
+* **gradle:** bump androidx.test:runner from 1.6.2 to 1.7.0 ([#75](https://github.com/RyuNen344/Tenugui/issues/75)) ([9ad91cd](https://github.com/RyuNen344/Tenugui/commit/9ad91cd9815b8dd9cd4d8b57f1ef95ca4cd39ae6))
+* **gradle:** bump androidx.test.espresso:espresso-core from 3.6.1 to 3.7.0 ([#70](https://github.com/RyuNen344/Tenugui/issues/70)) ([ac65b2f](https://github.com/RyuNen344/Tenugui/commit/ac65b2f39867704105d6a244bd1173bd85f4feec))
+* **gradle:** bump androidx.test.espresso:espresso-device from 1.0.1 to 1.1.0 ([#74](https://github.com/RyuNen344/Tenugui/issues/74)) ([377eeaa](https://github.com/RyuNen344/Tenugui/commit/377eeaa3a509a73be8bca387bf9f0cb77d0226b0))
+* **gradle:** bump androidx.test.ext:junit from 1.2.1 to 1.3.0 ([#73](https://github.com/RyuNen344/Tenugui/issues/73)) ([e11f89d](https://github.com/RyuNen344/Tenugui/commit/e11f89dc4f357f32acdeb80d7095b4d193bff3c2))
+* **gradle:** bump androidx.test.ext:truth from 1.6.0 to 1.7.0 ([#71](https://github.com/RyuNen344/Tenugui/issues/71)) ([83a610b](https://github.com/RyuNen344/Tenugui/commit/83a610bf6b25464a64ae3d5d0322ef8fdb1e82cd))
+* **gradle:** bump com-google-truth from 1.4.4 to 1.4.5 ([#88](https://github.com/RyuNen344/Tenugui/issues/88)) ([b62f2e4](https://github.com/RyuNen344/Tenugui/commit/b62f2e4276c59f51f984fc599389278d2c8d3c9a))
+* **gradle:** bump com.dropbox.dropshots from 0.5.0 to 0.5.1 ([#104](https://github.com/RyuNen344/Tenugui/issues/104)) ([a27c03c](https://github.com/RyuNen344/Tenugui/commit/a27c03c2d179478894cfd35be8a62940443787f8))
+* **gradle:** bump com.gradle.develocity from 4.0.2 to 4.1 ([#68](https://github.com/RyuNen344/Tenugui/issues/68)) ([9829511](https://github.com/RyuNen344/Tenugui/commit/9829511fbdd9f5ea385fce6418bf1242fdf59271))
+* **gradle:** bump com.gradle.develocity from 4.1 to 4.1.1 ([#81](https://github.com/RyuNen344/Tenugui/issues/81)) ([90af331](https://github.com/RyuNen344/Tenugui/commit/90af331a5c71aeca5ceb1cdc0e4c710697ae5466))
+* **gradle:** bump com.gradle.develocity from 4.1.1 to 4.2 ([#91](https://github.com/RyuNen344/Tenugui/issues/91)) ([051fe2d](https://github.com/RyuNen344/Tenugui/commit/051fe2dd798cbb5e83a567258946d90cffd7b994))
+* **gradle:** bump com.gradle.develocity from 4.2 to 4.2.1 ([#98](https://github.com/RyuNen344/Tenugui/issues/98)) ([4715117](https://github.com/RyuNen344/Tenugui/commit/47151179c2653f46fc6df802d155a0ac3820b17f))
+* **gradle:** bump com.gradle.develocity from 4.2.1 to 4.2.2 ([#100](https://github.com/RyuNen344/Tenugui/issues/100)) ([95a3866](https://github.com/RyuNen344/Tenugui/commit/95a386648442fdb98e1c38ae20bbe558e02f66f4))
+* **gradle:** bump com.vanniktech.maven.publish from 0.33.0 to 0.34.0 ([#67](https://github.com/RyuNen344/Tenugui/issues/67)) ([24a9f92](https://github.com/RyuNen344/Tenugui/commit/24a9f92e83c745c9bb9f6850882552aad8324ac6))
+* **gradle:** bump kotlin from 2.2.0 to 2.2.10 ([#79](https://github.com/RyuNen344/Tenugui/issues/79)) ([8bcea63](https://github.com/RyuNen344/Tenugui/commit/8bcea638c398fb3ee9bff7ed33440b990976ffa8))
+* **gradle:** bump kotlin from 2.2.10 to 2.2.20 ([#89](https://github.com/RyuNen344/Tenugui/issues/89)) ([3cc2e94](https://github.com/RyuNen344/Tenugui/commit/3cc2e946118ddda744170fc299bc90bf1b00b55e))
+* **gradle:** bump nl.littlerobots.version-catalog-update from 1.0.0 to 1.0.1 ([#95](https://github.com/RyuNen344/Tenugui/issues/95)) ([d692581](https://github.com/RyuNen344/Tenugui/commit/d69258144c29b5daa27b5318d1c035aefb68f595))
+* **gradle:** bump org.jetbrains.kotlinx.binary-compatibility-validator from 0.17.0 to 0.18.0 ([#62](https://github.com/RyuNen344/Tenugui/issues/62)) ([1095d12](https://github.com/RyuNen344/Tenugui/commit/1095d123b2afc35bc0ae6a1d3cf7f50e2431ad77))
+* **gradle:** bump org.jetbrains.kotlinx.binary-compatibility-validator from 0.18.0 to 0.18.1 ([#65](https://github.com/RyuNen344/Tenugui/issues/65)) ([cfb8914](https://github.com/RyuNen344/Tenugui/commit/cfb8914cf99277f368be8eea391c21abdce6451a))
+* **gradle:** bump org.robolectric:robolectric from 4.15.1 to 4.16 ([#83](https://github.com/RyuNen344/Tenugui/issues/83)) ([d6afbaa](https://github.com/RyuNen344/Tenugui/commit/d6afbaa1d13763973919ff954ad957d8be6d1575))
+* **gradle:** bump the compose group with 7 updates ([#101](https://github.com/RyuNen344/Tenugui/issues/101)) ([29970e7](https://github.com/RyuNen344/Tenugui/commit/29970e7950afe389e009773779f21a479859e574))
+* **gradle:** bump the compose group with 7 updates ([#107](https://github.com/RyuNen344/Tenugui/issues/107)) ([d0c016c](https://github.com/RyuNen344/Tenugui/commit/d0c016cc5fc3aac0ab8787662af6f471df41a166))
+* **gradle:** bump the compose group with 7 updates ([#78](https://github.com/RyuNen344/Tenugui/issues/78)) ([7843faf](https://github.com/RyuNen344/Tenugui/commit/7843faf7930d493ff3e5ceb22197b3183aa14bd3))
+* **gradle:** bump the compose group with 7 updates ([#87](https://github.com/RyuNen344/Tenugui/issues/87)) ([8b3d4ac](https://github.com/RyuNen344/Tenugui/commit/8b3d4ac1f6aa8075684c28d021919da25a24926f))
+* **gradle:** bump the compose group with 7 updates ([#99](https://github.com/RyuNen344/Tenugui/issues/99)) ([7eafa72](https://github.com/RyuNen344/Tenugui/commit/7eafa721feed5d75d78833e6834b47ae8ef8d412))
+* **gradle:** bump the compose group with 8 updates ([#94](https://github.com/RyuNen344/Tenugui/issues/94)) ([44db099](https://github.com/RyuNen344/Tenugui/commit/44db09904569c0b91c9d95787042cbc7bb522399))
+
+
+### Chores
+
+* Set termsOfUseAgree to 'yes' unconditionally ([#92](https://github.com/RyuNen344/Tenugui/issues/92)) ([e6f818a](https://github.com/RyuNen344/Tenugui/commit/e6f818afc6fbf137d4f83c5541fc30c7324a12c3))
+
 ## [1.0.4](https://github.com/RyuNen344/Tenugui/compare/1.0.3...1.0.4) (2025-06-24)
 
 
