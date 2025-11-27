@@ -1,9 +1,9 @@
 [versions]
 activity = "1.11.0"
 agp = "8.13.1"
-androidx-compose-material = "1.9.4"
+androidx-compose-material = "1.9.5"
 androidx-compose-material3 = "1.4.0"
-androidx-compose-ui = "1.9.4"
+androidx-compose-ui = "1.9.5"
 androidx-test-core = "1.7.0"
 androidx-test-ext-junit = "1.3.0"
 androidx-test-ext-truth = "1.7.0"
